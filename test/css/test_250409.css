@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard-Regular.woff) format('woff');
+    /* local은 내 컴퓨터에 프리텐다드가 깔려있다면 그걸 먼저 쓰라는 말*/
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard blod'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff');
+    /* local은 내 컴퓨터에 프리텐다드가 깔려있다면 그걸 먼저 쓰라는 말*/
+}
+body {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 17px;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;/* 줄바꿈시 단어별로 떨어짐 */
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+
+}
+.about {
+    text-align: center;
+}
+.about h1 {
+    font-size: 50px;
+    color: #1d1d1d;
+    line-height: 1.5;
+    margin: 130px 0 20px 0 ;
+
+}
+.about P{
+    margin: 0 0 70px 0;
+}
+
+.inv h1 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #037803;
+    margin: 130px 0 20px 0;
+}
+.inv P {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+.inv P strong {
+    font-weight: 700;
+    color: #037803;
+}
