@@ -12,6 +12,7 @@ body {
 * { 
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*width/height와 padding을 같이주면 사이즈가 늘어남 (이 현상을 막는 속성)*/
 }
 h1 , h2, h3 {
     font-size: inherit; /*  inherit은 브라우저가 주는 값 말고 내가 선언한 값만 상속받아*/
@@ -44,7 +45,7 @@ a {
 .esg h1 {
     padding: 176px 0 15px 0;
 }
-.esg .sub_tit , .int .sub_tit {
+.esg .sub_tit , .int .sub_tit , .mission .sub_tit {
     font-size: 50px;
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -57,7 +58,7 @@ a {
     display: inline-block;
 }
 .int {
-    margin: 133px 0 200px 0 ;
+    margin: 133px 0 0 0 ;
 }
 .int .sub_tit {
     margin: 15px 0 20px 0 ;
@@ -73,4 +74,19 @@ a {
 .int ul li strong {
     font-weight: 700;
     color:#1d1d1d;
+}
+.mission {
+    margin: 133px 0 200PX 0;
+}
+.mission .inner {
+    background-image: url(../image/hd.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660PX;
+    color: #fff;
+    padding: 98px 0 0 48px;
+}
+.mission .cnt {
+    color: rgba(255, 255, 255 , 0.8); /* 0.8 = 옵퍼서티 80% */
 }
