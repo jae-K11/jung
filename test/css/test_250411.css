@@ -1,0 +1,112 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body{
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3d3d3d ;
+    word-break: keep-all;
+}
+/*** START 태그의 기본 스타일 삭제 (초기화) ***/
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+    /* inherit 브라우저가 주는 값(기존값) 무시
+    왜냐 다른속성 주려고 */
+}
+li {
+    list-style: none; /* li의 동그라미 없애는것 */
+} /* li한테 줘야함 */
+* {
+    margin: 0 ; 
+    padding: 0 ;
+    box-sizing: border-box;
+} /* *은 (와일드카드), 모든태그를 의미한다 
+마진과 패딩을 주는 이유: 모든 여백을 없애기 위해 */
+/*** END 태그의 기본 스타일 삭제 (초기화) ***/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+} /*마진 0 auto; 웹페이지의 가운데 정렬 */
+
+.color {
+    margin: 152px 0 0 0 ;
+}
+
+.color .tit h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 15px 0 ;
+}
+.color .list {
+    margin: 30px 0 0 0 ;
+}
+.color .list ul {
+    display: flex;
+    justify-content: space-between;
+} /* ul의 li하위태그에게만 좌우로 배치 */
+.color .list ul li {
+    width: 297px;
+}
+.color .list ul li h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    height: 315px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 25px 0 0 25px ;
+}
+.color .list ul li p {
+    margin: 23px 0 0 10px ;
+}
+/* li태그들 중에서 item1 이라는 클래스명을 갖은 요소*/
+.color .list ul li.item1 h2 {
+    background-color: #00ad1d;
+}
+.color .list ul li.item2 h2 {
+    background-color: #008233;
+}
+.color .list ul li.item3 h2 {
+    background-color: #003087;
+}
+.color .list ul li.item4 h2 {
+    background-color: #002554;
+}
+.int {
+    margin: 150px 0 0 0 ;
+}
+.int .wrapper {
+    display: flex;
+    justify-content: space-between
+}
+.int .inner {
+     width: 651px;
+}
+.int h1 ,
+.int .tit .sub_tit {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.int .tit .sub_tit{
+    margin: 0 0 25px 0;
+}
+.int .list {
+    margin: 48px 0 0 0 ;
+}
+.int .list ul li{
+    border-bottom: 1px solid #b5b5b5;
+    padding: 25px 0px 25px 0px ;
+}
+.int .list ul li:first-child{
+    border-top: 1px solid #b5b5b5;
+}
+
+.int .list ul li .strong {
+}
+body {
+    margin: 0 0 200px 0 ;
+}
