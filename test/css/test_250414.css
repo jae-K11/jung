@@ -1,0 +1,140 @@
+@import url(font.css);
+body {
+	font-family: 'Pretendard' , sans-serif ;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1d1d1d ;
+    word-break: keep-all; 
+}
+
+/*** START 태그의 기본 스타일 삭제 (초기화) ***/
+h1 h2 h3 h4 h5 h6 {
+    font-size: inherit ;
+    font-weight: inherit;
+    /* inherit 브라우저가 주는 값(기존 값) 무시
+    왜냐 다른 속성 주려고 */
+}
+li {
+    list-style: none ; 
+}/*li에게 줘야함*/ /* li의 동그라미를 없애는 것 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}/* *은 와일드 카드로 모든태그를 의미한다 
+마진과 패딩을 0으로 주는 이유 : 모든 여백을 없애기 위해*/
+/* 여백떄문에 박스사이즈 맞추는거*/
+/*** END 태그의 기본 스타일 삭제 (초기화 ) ***/
+a { 
+    color: inherit ;
+    text-decoration: none ;
+}
+.wrapper {
+    width: 1260px ;
+    margin: 0 auto ;
+} /* 마진 0 auto; 웹페이지의 가운데 정렬 */ 
+header{
+    height: 84px;
+}
+header .wrapper {
+    display: flex ; /* logo와 gnb를 좌우로 배치 */
+    justify-content: space-between; /* flex 속성 양 쪽 끝 */
+ } 
+ header .logo{
+    margin: 20px 0 0 0 ;
+ }
+
+header .logo img {
+    width: 154px;
+    /*이미지는 넓이나 높이 둘중에 하나만 주면
+    나머지는 비율레 맞게 조절
+    --오히려 높이와 넓이 같이 주면  찌그러짐 */
+}
+header .gnb ul {
+    display: flex ;
+} 
+header .gnb ul li a {
+    display: block ;
+    font-size: 30px;
+    letter-spacing: -0.2px;
+    padding: 28px 28px 28px 28px;
+}
+
+.visual {
+    background: url(../image/vv.png) no-repeat center center / cover ; 
+    /* 백그라운드 한번에 정의 하는것          반복없음   좌우,아래 정렬 / 크기 */
+    height: 720px ; 
+    color: #fff
+}
+.visual h2 {
+    font-size: 100px ;
+    line-height: 1.2;
+    padding: 200px 0 40px 0 ;
+}
+
+.biz {
+    margin: 170px 0 0 0 ;
+    text-align: center;
+}
+.biz .tit h2 {
+    color: #004096 ;
+    font-size: 17px ;
+}
+.biz .tit p {
+    font-size: 50px ;
+    font-weight: 700 ;
+}
+.biz .list {
+    margin: 49PX 0 0 0 ;
+}
+.biz .list ul {
+    display: flex; 
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width:  297px ;
+}
+.biz .list ul li a {
+    display: block ; /* a의 필수값 */
+    text-align: center;
+}
+.biz .list ul li a h3 {
+    font-size: 35px;
+    margin: 20px 0 15px 0 ;
+}
+.biz .list ul li a .more {
+    border: 1px solid #ccc;
+    display: block; /* block을 주면 너비가 꽉 참 */
+    padding: 17px 0;
+    margin: 23px 0 0 0 ;
+}
+
+.brand {
+    background: url(../image/pp.png) no-repeat center center ;
+    margin: 125px 0 0 0 ;
+    height: 750px;
+    color: rgba(255,255,255,0.8) ;/*흰색 rgb값 255 , 옵퍼서티 80 %*/
+
+
+}
+.brand h2 {
+    padding: 260px 0 10px 40px ;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+}
+.brand .sub_tit {
+    margin: 0 0px 20px 40px ;
+}
+
+.brand .cnt {
+    border-top: 1px solid rgba(255,255,255,0.2) ;/*흰색 rgb값 255 , 옵퍼서티 80 %*/
+    ;
+    padding: 20px 0 0 0 ;
+    margin: 0 0 0 40px ;
+}
+footer {
+    margin: 200px 0 0 0 ;
+}
