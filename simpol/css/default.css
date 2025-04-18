@@ -1,0 +1,36 @@
+/* 태그 스타일의 초기화 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit; /* 브라우저에서 주는 스타일 말고 내가 주는값 상속받아라*/    
+    font-size: inherit;
+}
+strong {
+    font-weight: inherit;
+}
+em, address {
+    font-style: normal; /* 글자의 기울임 취소하는것 */
+}
+a {
+    color: inherit; /* 글자 파란색 삭제 */
+    text-decoration: none; /* 밑줄 삭제 */
+}
+button {
+    cursor: pointer; /* 마우스 포인터 손바닥 */
+    font-family: inherit; /* 버튼은 글자의 기본스타일을 상속받지 않아 상속받으라고 써줌 */
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    border: none; /* 테두리 삭제 */
+    background-color: transparent; /* 배경색 투명 */
+    background: none; /* 배경색 빼는거 더 강력함, 그냥 다 빼버려 느낌 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 높이/넓이를 주면 사이즈가 늘어나는걸 막고 유지시키는 코드 */
+}
+li{
+    list-style: none; /* 앞에 동그라미 삭제*/
+ }
+

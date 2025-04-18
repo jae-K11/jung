@@ -1,0 +1,17 @@
+/* 모든 본문에 나오는 태그를 감싸는 태그가 body이고 그래서 body에 기본 글자스타일을 정의
+글자스타일은 상속된다 (글자스타일만 상속한다) */
+body { 
+	font-family: 'Pretendard', sans-serif ;
+    /* 반드시 font.css에서 선언한 이름으로 불러야한다. sans-serif는 만약 프리텐다드가 없으면 
+    고딕체 아무거나 쓰라는 의미*/
+    font-size: 17px;
+    font-weight: 700;
+    line-height:  1.5;
+    color: #3d3d3d;
+    word-break: break-all;
+}
+.wrapper {
+    width: 1260; /* 내 디자인 파일 레이아웃 가이드 넓이 */
+    margin: 0 auto; /* 브라우저에 가운데 정렬 */
+}
+
