@@ -10,15 +10,156 @@
 <body><!--홈페이지 전체를 감싸는 역할 (가로스크롤바 막음) -->
     <div id="wrap">
         <header>
-            <h1>심폴</h1>
-            <nav class="gnb">메뉴</nav><!--//gnb-->
-            <a href="https://www.simpol.co.kr/" target="_blank" title="새창으로" class="shop">쇼핑몰</a>
-            <!-- 다른 홈페이지나 주소가 다른페이지로 연결할때 새창으로 연결 
-                내 홈페이지 내부의 다른페이지로 연결은 그냥한다 
-                target="_blank" 새창은 반드시 title="새창열림" 새창으로 열린다고 알려야함-->
+            <h1 class="logo"><a href="index.html"><img src="../simpol/logo.svg" alt="심폴로고"></a></h1>
+            <div class="inner">
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#">심플소개</a></li>
+                        <li><a href="#">소식</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                        <li><a href="#">구매후기</a></li>
+                    </ul>
+                </nav><!--//gnb-->
+                <a href="https://www.simpol.co.kr/" target="_blank" title="새창으로" class="shop">쇼핑몰</a>
+                <!-- 다른 홈페이지나 주소가 다른페이지로 연결할때 새창으로 연결 
+                    내 홈페이지 내부의 다른페이지로 연결은 그냥한다 
+                    target="_blank" 새창은 반드시 title="새창열림" 새창으로 열린다고 알려야함-->
+            </div><!--//inner-->
         </header>
         <main class="container">
-            
+            <section class="visual">
+                <div class="wrapper">
+                    <h2> 변함없는 고객사랑, 부동의 점유율 1위 심폴</h2>
+                    <p>마음에 깊이 남을 감동적인 사이트가 되겠다는 심폴의 마음입니다<br>
+                    심폴은 다육식물,화초,관엽식물,야생화,기자재관련 모든 품목을 편리하게<br>
+                    쇼핑하실 수 있도록 모든 서비스를 제공해 드리고 있습니다 </p>
+                </div>
+            </section><!--visual-->
+            <section class="product">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>SIMPOL CATEGORY</h2>
+                        <p>국내 최대 식물 쇼핑오픈마켓</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                <div class="photo"><img src="images/product01.jpg" alt="다육이 화분"></div>
+                                <h3>다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장</h3>
+                                </a>   
+                            </li>
+                            <li>
+                                <a href="#">
+                                <div class="photo"><img src="images/product02.jpg" alt="허브 화분"></div>
+                                <h3>야생화/허브/수생식물선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/선인장다육식물/</h3>
+                                </a>   
+                            </li>
+                            <li>
+                                <a href="#">
+                                <div class="photo"><img src="images/product03.jpg" alt="생화 화분"></div>
+                                <h3>꽃배달/생화/말린꽃</h3>
+                                </a>   
+                            </li>
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+            </section><!--product-->
+            <section class="network">
+                <div class="wrapper">
+                    <h2>SIMPOL NETWROK</h2>
+                    <p class="  ">신속한 조회! 정확한 배송!</p>
+                    <p>심폴 입점업체에는 고양시, 양재동, 성남 현인단지 등 각 도매센터에 위치해 있습니다<br>
+                        각 위치별 도매센터에서 신속하게 조회하여 배송해 드립니다.
+                    </p>
+                    <a href="#"> 자세히보기 </a>
+                </div>
+            </section><!--network-->
+
+                <section class="community">
+                    <div class="wrapper">
+                    <div class="tit">
+                        <h2>SIMPOL COMMUNITY</h2>
+                        <p>식물을 사랑하는 사람들의 소통공간</p>
+                    </div>
+                    <div class="list">
+                        <div class="group">
+                            <ul>
+                                <li class="color bg1">
+                                    <a href="#">
+                                        <strong>공지사항</strong>
+                                        <h3>동백나무(#동백#동백나무#동백나무꽃#동백나무열매)</h3>
+                                        <span class="date">
+                                            <span>심폴</span>
+                                            <span>2025.03.28</span>
+                                        </span>
+                                         <!-- 최신 게시물처럼 a태그안에 글을 코딩할때
+                                        카테고리, 작성자, 작성일 이런건 strong, span 많이씀
+                                         span은 의미없는 글자를 감싸는 태그 
+                                        <strong><strong>이 코딩은 오류</strong></strong>
+                                        <span><span> span태그는 가능 </span></span>-->
+                                    </a>
+                                </li>
+                                <li class="gree">
+                                    <a href="#">
+                                        <strong>이벤트</strong>
+                                        <h3>깽꺵이풀 2+1 이벤트</h3>
+                                        <span class="date">
+                                            <span>심폴</span>
+                                            <span>2025.04.15</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="review bg1">
+                                    <a href="#">
+                                        <strong>구매후기</strong>
+                                        <h3>좋은 식물 저렴한데 모든면에서 단점을 찾을수가 없네요 배송도 너무 빠르게와서 좋았습니다</h3>
+                                        <span class="date">
+                                            <span>126****</span>
+                                            <span>2025.04.16</span>
+                                        </span>
+                                    </a>
+                                </li>
+                              </ul>
+                            </div>
+                                <div class="group">
+                                    <ul>
+                                        <li class="review bg1">
+                                            <a href="#">
+                                                <strong>구매후기</strong>
+                                                <h3>넘 예뻐요~ 무사히 잘 도착했어요 포장도 잘해주셔서 쏟아지지 않고 잘 받았어요</h3>
+                                                <span class="date">
+                                                    <span>917****</span>
+                                                    <span>2025.04.16</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="color bg2">
+                                            <a href="#">
+                                                <strong>식물 초보 길라잡이</strong>
+                                                <h3>수국 한번 봐주세요...^^</h3>
+                                                <span class="date">
+                                                    <span>작은울타리</span>
+                                                    <span>2025.03.11</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="gray">
+                                            <a href="#">
+                                                <strong>식물이름 문의</strong>
+                                                <h3>꽃 이름 알고싶어요</h3>
+                                                <span class="date">
+                                                    <span>butterfly</span>
+                                                    <span>2025.04.04</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul> 
+                                </div>
+                        </div>
+                    </div>
+                </section><!--community-->
         </main><!--//container-->
         <footer></footer>
     </div>

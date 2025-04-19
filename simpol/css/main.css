@@ -1,3 +1,162 @@
 @import url(default.css);
 @import url(font.css);
 @import url(common.css);
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* logo와 inner를 header넓이 안에서 좌우 끝으로 배치 */
+    height: 100px;
+    padding: 0 30px; /* 첫번째: 위아래 , 두번쨰: 좌우 */
+}
+header .logo {
+    margin: 28px 0 0 0;
+}
+header .inner {
+    display: flex; /* gnb shop 을 좌우로*/
+    align-items: center;
+    gap: 34px /*gnb가 shop사이의 여백 */
+}
+header .inner .gnb ul {
+    display: flex;
+}
+header .inner .gnb ul li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 100px;
+    /* header의 높이랑 1차메뉴의 a의 높이는 같아야함 a에 행간을 header의 높이값으로 줌
+    a에 높이가 생기고 글자는 위아래 가운데 정렬이 됨 */
+    padding: 0 32px; /* 행간을 맞췄기떄문에 위아래여백 안줌*/
+}
+header .inner .shop {
+    font-size: 17px;
+    font-weight: 700;
+    color: #00ac47;
+    border: 1px solid #00ac47;
+    border-radius: 20px;
+    padding: 7px 30px ;
+}
+.container .visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center /cover;
+    height: 600px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 30px;
+}
+.container .visual h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 200px 0 10px 0 ;
+    letter-spacing: 0.03em; /* -30 */
+}
+.product {
+    margin: 105px 0 0 0;
+}
+.product .tit h2 {
+    color: #00ac47;
+    margin: 0 0 20px 0 ;
+}
+.product .tit p {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.03em; /* -30 */
+}
+.product .list {
+    margin: 30px 0 0 0 ; 
+}
+.product .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.product .list ul li {
+    width: 404px;
+}
+.product .list ul li a {
+    display: block;
+}
+.product .list ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 하단에 여백을 삭제하기 위해서 
+    절대 img태그에 직접주면 적용 안됨 img태그만 감싸는 요소에 줘야함*/
+}
+.product .list ul li a h3 {
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 12px 0 0 0 ;
+    /* 1줄로 제한하기 */
+    white-space : nowrap; /* 줄바꿈 허용하지 않는것 */
+    overflow: hidden; /* 글자 잘라주기 */
+    text-overflow: ellipsis; /* 잘리는 글자를 ...이라고 표시해줌 */
+}
+.network {
+    background: url(../images/network_bg.jpg) no-repeat center center / cover;
+    margin: 110px 0 0 0 ;
+    height: 600px;
+    color: rgba(255,255,255,0.8); /* 옵퍼서티 80% */
+}
+.network h2 {
+    padding: 190px 0 0 0;
+    color: #00ac47;
+}
+.network .sub_tit {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.03em; /* -30 */
+    margin: 15px 0 15px 0;
+    color: #fff;
+}
+.network a {
+    display: inline-block;
+    border: 1px solid #fff ; /* 버튼배경색깔 있으면 background-color로 준다*/
+    padding: 8px 20px;
+    margin: 15px 0 0 0 ;
+    border-radius: 20px;
+}
+
+.community{
+    margin: 110px 0 0 0;
+}
+.community .tit h2 {
+    color: #00ac47;
+}
+.community .tit p{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.03em; /* -30 */
+    margin: 15px 0 0 0 ;
+}
+.community .list {
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.community .list .group {
+    width: calc(50% - 12px);
+    /*
+        몇개로 분할 : 2개 = 100/2 = 50%
+        사이 여백의 총합 / 분할하는 갯수로 나눔 = 24 / 2 = 12px
+    */
+}
+.community .list .group ul {
+    display: flex; /* li의 줄바꿈 */
+    flex-wrap: wrap; /* li가 두줄로 생성하는걸 허락하는 줄바꿈 */
+}
+/* 
+    1. li의 사이즈와 a의 사이즈가 동일해야 할때
+    2. height를 꼭 줘야 하는 디자인일때 (위에 prouduct 높이가 필요없는 디자인)
+    -- li에는 넓이를 주고 a에는 높이를 줌
+*/
+.community .list .group ul li a {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 32px 30px ;
+
+}
+
+footer{
+    margin: 200px 0 0 0 ;
+}
