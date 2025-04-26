@@ -1,0 +1,103 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+body {
+    color: #3d3d3d;
+    margin: 0 0 300px 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 100px 0 40px 0;
+}
+
+.img_test .group {
+    display: flex;
+    gap: 100px;
+}
+.img_test .group .inner ul {
+    display: flex;
+}
+.img_test .group .inner ul li img {
+    width: 200px; /* 너비만 줘도 높이는 자동으로 줌 */
+}
+.img_svg .btn_wrap {
+    display: flex;
+    gap: 26px;
+}
+.img_svg .btn_wrap a {
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    display: flex; /* span과 i가 좌우로 배치하므로 block은 안줘도 된다 */
+    align-items: center;
+    gap: 20px; /* span(자세히보기&더보기)와 i(아이콘)사이의 여백 */
+    padding: 7px 13px 4px 20px;
+}
+
+.svg_html .btn_wrap {
+    display: flex;
+    gap: 100px;
+}
+.svg_html .btn_wrap a {
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    display: block; /* a의 필수값 */
+    padding: 7px 50px 7px 20px;
+    /* 오른쪽에 i태그 무시하고 여백 개선 */
+    position: relative; /* i태그의 정렬 기준 */
+}
+.svg_html .btn_wrap a i {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 15px;
+    top: 9px;
+}
+.svg_html .btn_wrap a:hover {
+    border-color: #29D720; /* 배경색과 같은색으로 테두리색 */
+    background-color: #29D720;
+    color: #fff;
+}
+.svg_html .btn_wrap a:hover i svg path {
+    fill: #fff;
+}
+.svg_css .btn_wrap {
+    display: flex;
+    gap: 26px;
+}
+.svg_css .btn_wrap a {
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    display: block; /* a의 필수 값 */
+    padding: 7px 50px 7px 20px;
+    position: relative; /* after 정렬의 기준 */
+}
+.svg_css .btn_wrap a::before{
+    content: "";
+}
+.svg_css .btn_wrap a::after {
+    content: ""; 
+    /* after/before 가상선택자 필수 값 
+    항상 absolute로 위치를 조정해서 코딩한다 */
+    position: absolute; /* a를 기준으로 정렬*/
+    right: 15px;
+    top: 12px;
+    /* before,after는 넓이,높이 필수 - background 크기 (아이콘사이즈) */
+    
+background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_90' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='14.3262' height='14.3262' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_90)'%3E%3Cpath d='M4.79031 13.1323L3.73077 12.0728L8.64047 7.16309L3.73077 2.25339L4.79031 1.19385L10.7596 7.16309L4.79031 13.1323Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+background-repeat: no-repeat;
+background-position: center center;
+}
+.svg_css .btn_wrap a.more1::after {
+    width: 14px;
+    height: 14px;
+}
+.svg_css .btn_wrap a.more2::after {
+    width: 19px;
+    height: 19px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_54' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='19.6702' height='19.6702' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_54)'%3E%3Cpath d='M9.01552 10.6547H4.09796V9.0155H9.01552V4.09795H10.6547V9.0155H15.5723V10.6547H10.6547V15.5722H9.01552V10.6547Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    
+ Background-position: center center;
+}
