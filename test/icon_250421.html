@@ -33,7 +33,11 @@
     <div class="img_svg">
         <div class="wrapper">
             <h1>img태그로 아이콘 코딩하기 </h1>
-            <P>단점 : 글자랑 아이콘이 위아래 정렬이 안됨 , 마우스 오버 안됨 (마우스 오버 했을때 이미지를 교체해야하므로 이게 , 잘안쓰는 방식)</P>
+            <h2>단점</h2>
+            <ul class="item">
+                <li>글자랑 아이콘이 위아래 정렬이 안됨</li>
+                <li>마우스 오버 안됨 (마우스 오버 했을때 이미지를 교체해야하므로 이게 , 잘안쓰는 방식)</li>
+            </ul>    
             <div class="btn_wrap">
                 <a href="#">
                     <span>자세히보기</span>
@@ -47,18 +51,34 @@
                     <span>더보기</span>
                     <i><img src="image/more_icon2.svg" alt=""></i>
                 </a>
-            </div>
+            </div><!--//btn_wrap-->
+            <div class="tnb">
+                <a href="#">
+                    <i><img src="image/lang_icon.svg" alt=""></i>
+                    <span>EN</span>
+                </a>
+                <a href="#">
+                    <i><img src="image/menu_icon.svg" alt=""></i>
+                    <span>메뉴</span>
+                </a>
+            </div><!--//tnb-->
+            <div class="hnb">
+                <a href="#"><img src="image/sms_icon.svg" alt="메세지"></a>
+                <a href="#"><img src="image/alert_icon.svg" alt="알림내역"></a>
+                <a href="#"><img src="image/cart_icon.svg" alt="장바구니"></a>
+            </div><!--//hnb-->
         </div>
     </div><!--//img_svg-->
     <div class="svg_html">
         <div class="wrapper">
             <h1>svg코드를 html에 입력해서 아이콘 코딩하기</h1>
             <h2>장점</h2>
-            <ul>
+            <ul class="item">
                 <li>이미지를 저장하지 않아도 됨</li>
+                <li>아이콘의 색상 변경이 쉬움 (fill로 색상변경 가능)</li>
             </ul>
             <h2>단점</h2>
-            <ul>
+            <ul class="item">
                 <li>html코드가 너무 길다.</li>
             </ul>
             <div class="btn_wrap">
@@ -95,13 +115,15 @@
         <div class="wrapper">
             <h1>svg를 css에 입력해서 아이콘 코딩하기</h1>
             <h2>장점</h2>
-            <ul>
+            <ul class="item">
                 <li>html의 코드가 깔끔함</li>
+                <li>이미지를 별도로 저장하지 않아도 됨</li>
             </ul>
             <h2>단점</h2>
-            <ul>
+            <ul class="item">
                 <li>css가 복잡하다</li>
                 <li>버튼 디자인이 똑같아도 아이콘이 다르면 class명을 별도로 줘야한다 </li>
+                <li>마우스 오버시 아이콘 색상이 변경되면 수정하는게 어려움</li>
             </ul>
             <div class="btn_wrap">
                 <a href="#" class="more1">자세히보기</a>
