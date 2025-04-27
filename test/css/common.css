@@ -12,3 +12,14 @@ body {
     width: 1260px; /* 나의 디자인 파일 레이아웃 가이드 넓이 */
     margin: 0 auto; /* 브라우저에 가운데 정렬 */
 }
+.blind {
+    /* html 표준에 따르자면 글자를 써야하는데 디자인에는 글자가 없어서
+        글자를 없애는 클래스 */
+        position: absolute; /*기준없음 , 글자 (범위)사라지게 하려고, 공간차지 않하게하려고*/
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden; /* 넓이가 1px이라 글자가 넘치면 숨겨버림 */
+        color: transparent; /* 글자 투명 */
+}       
