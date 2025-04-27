@@ -69,7 +69,17 @@ ul.item li::before {
     justify-content: center;
     align-items: center;
 }
-
+.img_svg .hnb {
+    display: flex;
+}
+.img_svg .hnb a {
+    display: flex;
+    flex-direction: column;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .svg_html .btn_wrap {
@@ -97,6 +107,46 @@ ul.item li::before {
 .svg_html .btn_wrap a:hover i svg path {
     fill: #fff;
 }
+.svg_html .tnb {
+    display: flex;
+    margin: 50px 0 50px 0;
+}
+.svg_html .tnb a {
+    width: 52px;
+    height: 52px;
+    position: relative; /* i태그 정렬의 기준 */
+    padding: 25px 0 0 0; /* span태그 글자를 아래로 밀기 - i태그 영역은 무시 */
+    text-align: center; /* span태그 글자를 가운데 정렬 */
+}
+.svg_html .tnb a i {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 2px;
+    width: 100%; /* 넓이 100%로 주면 a의 넓이의 100%(a가 기준이라서)로 된다
+    그리고 가운데정렬됨 (a의 text-align: center 상속받음) */
+}
+.svg_html .hnb {
+    display: flex;
+}
+.svg_html .hnb a {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.svg_html .hnb a span {
+    text-indent: -999px; /* 글자를 구석으로 보냄 */
+    color: transparent; /* 투명 */
+    width: 1px;
+    height: 1px;
+    overflow: hidden; /* 글자 범위안에 안들어오게 하려고 */
+    position: absolute; /* 기준 없음 , 글자 (범위)사라지게 하려고, 공간차지 않하게하려고 */
+    /*
+        글자를 html에 쓰긴 써야하는데, 디자인상 보이면 안되서
+         font-size:0; , line-hight:0;인데 접근성 위배됨
+         이 방식은 굉장히 많이 쓰고 사이트 마다 스타일이 다름 
+    */
+}
+
 .svg_css .btn_wrap {
     display: flex;
     gap: 26px;
