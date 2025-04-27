@@ -1,0 +1,6 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+/* index페이지 - 메인페이지만 적용되는 스타일 
+    그리고 다른 css를 호출함*/
+    
