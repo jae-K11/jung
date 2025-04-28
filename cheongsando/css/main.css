@@ -3,4 +3,30 @@
 @import url(common.css);
 /* index페이지 - 메인페이지만 적용되는 스타일 
     그리고 다른 css를 호출함*/
-    
+
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover ;
+}
+.visual .wrapper {
+    height: 100vh; /* 브라우저 높이에 딱 맞게 */
+    min-height: 500px;
+    /* 높이가 변하는것은 막지 않지만 최소한 500px은 되어야 한다. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 사진공방은 absolute라 제외
+        h2만 wrapper의 영역 안에서 정렬하기 위해 flex */
+}
+
+.visual h2 {
+
+}
+.visual .picture {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+footer {
+    margin: 400px 0 0 0;
+}
