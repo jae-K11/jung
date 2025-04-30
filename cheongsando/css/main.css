@@ -196,7 +196,7 @@ header .tnb a.icon03::before {
     border: 1px solid #004AAD;
     border-radius: 20px;
     padding: 3px 43px 5px 21px;
-    transition: 0.5s;
+    transition: 0.5s; /* 부드럽게 바꿔주는 애니메이션 */
 }
 .culture .more::after {
     content: "";
@@ -209,6 +209,7 @@ header .tnb a.icon03::before {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s; /* 부드럽게 바꿔주는 애니메이션 */
 }
 .culture .more:hover {
     background-color: #004AAD;
@@ -225,7 +226,142 @@ header .tnb a.icon03::before {
         transform: translate(0, 50%); 
     }
 }
+.tour {
+    margin: 140px 0 0 0;
+    background-color: #e7e7e7;
+    padding: 163px 0 228px 0; /*background-color 는 높이 안줌. 여백 padding로 준다 */
+}
+.tour .wrapper {
+    position: relative; /* more의 정렬의 기준*/
+}
 
+.tour .tit h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 17px 0;
+} 
+.tour .list {
+    margin: 44px 0 0 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 202px;
+}
+.tour .list ul li.on {
+    width: 618px;
+    
+}
+.tour .list ul li a {
+    display: flex;
+    align-items: flex-end;  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 309px;
+    padding: 0 0 54px 0; /* h3 글자 여백 */
+   
+}
+.tour .list ul li.list01 a {
+    background-image: url(../images/tour_list01.jpg);
+}
+.tour .list ul li.list02 a {
+    background-image: url(../images/tour_list02.jpg);
+}
+.tour .list ul li.list03 a {
+    background-image: url(../images/tour_list03.jpg);
+}
+.tour .list ul li.list04 a {
+    background-image: url(../images/tour_list04.jpg);
+}
+
+.tour .list ul li a .cnt_wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* h3글자 가운데 정렬 */
+}
+.tour .list ul li a .cnt_wrap .cnt_tit h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.tour .list ul li a .cnt_wrap .cnt_tit p {
+    display: none; /* 글자 안보이게 하는것 */
+}
+.tour .list ul li a .cnt_wrap sapn {
+    display: none; /* 글자 안보이게 하는것 */
+}
+
+/**** li의 on클래스가 들어가는 경우 ****/
+.tour .list ul li.on {
+    width: 618px;
+}
+.tour .list ul li.on a {
+    padding: 0 31px 33px 31px; /* h3 글자 여백 */
+}
+.tour .list ul li.on a .cnt_wrap {
+    justify-content: space-between;
+}
+.tour .list ul li.on a .cnt_wrap .cnt_tit p {
+    display: block; /* 
+    /* display : none 숨김요소를 다시 글자 보이게 하려면
+     block,flex,inlineblock...주면됨 none만 아니면됨 */
+     margin: 2px 0 0 0;
+}
+.tour .list ul li.on a .cnt_wrap sapn {
+    display: block; 
+    /* display : none 숨김요소를 다시 글자 보이게 하려면
+     block,flex,inlineblock...주면됨 none만 아니면됨 */
+    width: 46px;
+    height: 46px;
+    border: 1px solid #fff;
+    border-radius: 50%; /* 동그라미 */
+    color : transparent; /* 자세히보기 글자 투명하게 */
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_180_3' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_180_3)'%3E%3Cpath d='M7.35658 20.1663L5.72949 18.5393L13.2691 10.9997L5.72949 3.46009L7.35658 1.83301L16.5232 10.9997L7.35658 20.1663Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat; 
+    /* 아이콘 여기다 주면됨 
+    background-size주면 늘어나서 안줌 */
+}
+/**** END // li의 on클래스가 들어가는 경우 ****/
+
+
+
+.tour .more {
+    position: absolute; /*wrapper 의 정렬*/
+    top: 0;
+    right: 0;
+    border: 1px solid #004AAD;
+    color: #004AAD;
+    padding: 3px 43px 5px 21px;
+    border-radius: 30px;
+    transition: 0.5s; /* 부드럽게 바꿔주는 애니메이션*/
+}
+
+.tour .more::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 18px;
+    height: 15px;
+    width: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_55_346' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='19' height='19'%3E%3Crect width='19' height='19' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_55_346)'%3E%3Cpath d='M8.70898 10.2923H3.95898V8.70898H8.70898V3.95898H10.2923V8.70898H15.0423V10.2923H10.2923V15.0423H8.70898V10.2923Z' fill='%23004AAD'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s; /* 부드럽게 바꿔주는 애니메이션*/
+}
+.tour .more:hover {
+    background-color: #004AAD;
+    color: #fff;
+}
+.tour .more:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_55_346' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='19' height='19'%3E%3Crect width='19' height='19' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_55_346)'%3E%3Cpath d='M8.70898 10.2923H3.95898V8.70898H8.70898V3.95898H10.2923V8.70898H15.0423V10.2923H10.2923V15.0423H8.70898V10.2923Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 footer {
     margin: 400px 0 0 0;
 }
