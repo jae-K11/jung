@@ -390,10 +390,13 @@ header .tnb a.icon03::before {
     width: 511px; /* 공지사항 높이와 너비*/
     height: 404px;
     border-radius: 10px;
-    background-color: rgba(0, 26, 89, 0.8); /*공지사항 배경컬러*/
+    background-color: rgba(0, 26, 89, 0.6); /*공지사항 배경컬러*/
     backdrop-filter: blur(10px); /* 배경색 블러 처리*/
     padding: 46px 39px 0 39px; /* 공지사항 안쪽 여백 */
     position: relative; /* more의 정렬의 기준*/
+}
+.community .inner .notice:hover{
+    background-color: #001A59 ;
 }
 .community .inner .notice h3 {
     font-size: 40px;
@@ -435,22 +438,40 @@ header .tnb a.icon03::before {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.community .inner .notice .list ul li a:hover strong {
+    font-weight: 800;
+}
 .community .inner .notice .more {
     position: absolute ; /* notice를 기준으로 정렬*/
-    right: 32px;
+    right: 70px;
     top: 71px;
-    padding: 0 23px 0 0; /* 아이콘 배치할 영역까지 more로 잡혀야 눌림*/
+    padding: 0 30px 0 0; /* 아이콘 배치할 영역까지 more로 잡혀야 눌림*/
+    width: 19px;
+    height: 19px;
+}
+.community .inner .notice .more:hover {
+    font-weight: 800;  
+}
+.community .inner .notice .more:hover::before {
+    /* 밑줄 만들기 */
+    content: "";
+    position: absolute;
+    left: 3px;
+    bottom: -4px;
+    width: calc(100% - -20px);
+    height: 1px;
+    background-color: rgba(255,255,255,0.8);
 }
 .community .inner .notice .more::after {
     content: "";
     position: absolute;
-    right: -5px;
-    top: 6px;
+    right: -36px;
+    top: 3px;
     height: 21px;
     width: 21px;
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.70898 7.29232H0.958984V5.70898H5.70898V0.958984H7.29232V5.70898H12.0423V7.29232H7.29232V12.0423H5.70898V7.29232Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M7.28027 0.97168V5.72168H12.0303V7.28027H7.28027V12.0303H5.72168V7.28027H0.97168V5.72168H5.72168V0.97168H7.28027Z' stroke='white' stroke-opacity='0.8' stroke-width='0.025'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
-    position: center center;
+    background-position: center center;
 }
 
 .community .inner .link {
@@ -475,13 +496,16 @@ header .tnb a.icon03::before {
     display: block; 
     height: 150px;
     border-radius: 10px;
-    background-color: rgba(0, 26, 89, 0.8); /*공지사항 배경컬러*/
+    background-color: rgba(0, 26, 89, 0.6); /*공지사항 배경컬러*/
     backdrop-filter: blur(10px); /* 배경색 블러 처리*/
     padding: 30px 0 0 30px; /* 글자 바깥 여백 */
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
     position: relative;
+}
+.community .inner .link ul li a:hover {
+    background-color: #001A59;
 }
 .community .inner .link ul li a::after {
     content: "";
@@ -507,5 +531,52 @@ header .tnb a.icon03::before {
 }
 
 footer {
-    margin: 400px 0 0 0;
+    /* footer는 높이 안잡아도됨 */
+    padding: 92px 0 99px 0 ; 
+    color: #666
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 42px ; /* 여백 */
+}
+footer .f_nav ul li {
+    position: relative; /* before 정렬의 기준*/
+}
+footer .f_nav ul li::before {
+    /* 작대기 */
+    content: "";
+    position: absolute; /* li를 기준으로 정렬 */
+    left: -21px;
+    top: 5px;
+    width: 1px;
+    height: 13px;
+    background-color: #ccc;
+}
+footer .f_nav ul li:first-child::before {
+    display: none; /* 첫번째 작대기 숨김처리 */
+}
+footer .f_nav ul li a:hover {
+    text-decoration: underline;
+}
+footer .f_info {
+    padding: 40px 0;
+    display: flex;
+    gap: 20px;
+}
+footer .copyright p{
+    margin: 7px 0 0 0;
+}
+footer .copyright strong {
+    position: relative ; /* afterd의 정렬의 기준 */
+}
+footer .copyright strong::after {
+    /* 밑줄 만들기 */
+    content: "";
+    position: absolute; /* strong의 기준의 정렬 */
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: #CCC;
+    
 }
