@@ -4,12 +4,12 @@
 /* index페이지 - 메인페이지만 적용되는 스타일 
     그리고 다른 css를 호출함*/
 header {
-    position: absolute; /* wrap를 기준으로 정렬 */
+    position: absolute; /* wrap를 기준으로 정렬, visual안에 들어감 */
     left: 0;
     top: 0;
     z-index: 100; /* absolute, relative 보다 맨 위 */
     color: #fff;
-    width: 100%;
+    width: 100%; /* space-between이 적용됨 */
     height: 100px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     display: flex; /* h1 nav tnb를 좌우에 배치 */
