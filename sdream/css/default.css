@@ -1,0 +1,35 @@
+/* 태그별로 브라우저에서 기본스타일을 준다
+    그걸 모두 삭제하고 body에서 선언한 글자 스타일 대로만 적용 
+    여백, 동그라미 삭제 */
+    h1,h2,h3,h4,h5,h6 {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    strong {
+        font-weight: inherit;
+    }
+    em, address {
+        font-style: normal;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    button {
+        border: none;
+        background: none;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        cursor: pointer; /* 마우스 오버시 손바닥 모양으로 */
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
