@@ -70,9 +70,32 @@ header .tnb .lang {
 }
 @media screen and (max-width:640px) {
 
-    
-}
-
+            header {
+                height: 56px;
+            }
+            header .wrapper {
+                margin-right: 0;
+                /* 오른쪽 여백만 삭제- 메뉴 열기 버튼이 오른쪽 끝까지 배치되게 하려고 */
+            }
+            header .logo a img {
+                width: 90px;
+            }
+            header .gnb .gnb_open {
+                display: block; /* none로 숨김요소를 다른속성(block)으로 주면 나타남 */
+                width: 56px; /* 정사각형박스라  header높이랑 같음*/
+                height: 56px;
+                background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_46_3546' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect width='26' height='26' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_46_3546)'%3E%3Cpath d='M4.33333 7.58268C4.02639 7.58268 3.7691 7.47886 3.56146 7.27122C3.35382 7.06359 3.25 6.80629 3.25 6.49935C3.25 6.1924 3.35382 5.93511 3.56146 5.72747C3.7691 5.51984 4.02639 5.41602 4.33333 5.41602H21.6667C21.9736 5.41602 22.2309 5.51984 22.4385 5.72747C22.6462 5.93511 22.75 6.1924 22.75 6.49935C22.75 6.80629 22.6462 7.06359 22.4385 7.27122C22.2309 7.47886 21.9736 7.58268 21.6667 7.58268H4.33333ZM4.33333 20.5827C4.02639 20.5827 3.7691 20.4789 3.56146 20.2712C3.35382 20.0636 3.25 19.8063 3.25 19.4993C3.25 19.1924 3.35382 18.9351 3.56146 18.7275C3.7691 18.5198 4.02639 18.416 4.33333 18.416H21.6667C21.9736 18.416 22.2309 18.5198 22.4385 18.7275C22.6462 18.9351 22.75 19.1924 22.75 19.4993C22.75 19.8063 22.6462 20.0636 22.4385 20.2712C22.2309 20.4789 21.9736 20.5827 21.6667 20.5827H4.33333ZM4.33333 14.0827C4.02639 14.0827 3.7691 13.9789 3.56146 13.7712C3.35382 13.5636 3.25 13.3063 3.25 12.9993C3.25 12.6924 3.35382 12.4351 3.56146 12.2275C3.7691 12.0198 4.02639 11.916 4.33333 11.916H21.6667C21.9736 11.916 22.2309 12.0198 22.4385 12.2275C22.6462 12.4351 22.75 12.6924 22.75 12.9993C22.75 13.3063 22.6462 13.5636 22.4385 13.7712C22.2309 13.9789 21.9736 14.0827 21.6667 14.0827H4.33333Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 26px;
+            }
+            header .gnb .gnb_wrap {
+                display: none; /* 숨김 */
+            }
+            header .tnb {
+                display:  none; /* 숨김 */
+            }
+}/* @media */
 
 .visual {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover ;
@@ -102,3 +125,41 @@ header .tnb .lang {
                 display: none; /* 줄바꿈 삭제 */
             }
 }/* @media */
+.project {
+    margin: 266px 0 0 0;
+}
+.project .wrapper {
+    display: flex; /* tit 와 list 좌우로 배치 */
+    justify-content: space-between;
+}
+.project .tit h2 {
+    color: #0078E9;
+    margin: 0 0 10px 0;
+}
+.project .list {
+    width: 66.03% ; /* 832/1260*100 = 66.03% 
+    wrapper사이즈(1260)안에서 li 가로 1줄의 넓이(832px) */
+}
+.project .list ul {
+    display: flex;
+    flex-wrap: wrap ;/* 2줄 허용 */
+    gap: 24px 24px;
+}
+.project .list ul li {
+    /* li에게 넓이 꼭 줘야함 */
+    width: calc(50% - 12px) ; 
+    /* 100%/한줄에 보일 li갯수 = 100%/2 = 50%
+    한줄에 있는 여백의 총합 / 한줄에 보일 li갯수 = 24px/2 = 12px */
+}
+.project .list ul li a {
+    display: block;
+}
+.project .list ul li a .photo {
+    overflow: hidden;
+    border-radius: 20px;
+}
+.project .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
