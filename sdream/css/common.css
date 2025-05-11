@@ -4,8 +4,10 @@ body {
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
-    word-break: keep-all;
+    word-break: keep-all; /* 스페이스기준 단어별 줄바꿈 */
     color: #555;
+    word-wrap: break-word;
+    /* 단어가 너무 긴 경우 강제로 줄바꿈을 주는 방법 */
 }
 .wrapper {
     width: 1260px;
