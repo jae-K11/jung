@@ -342,6 +342,46 @@ header .tnb .lang {
             }
 }/* @media */
 
+.webzine {
+    background-color: #E6F0FD;
+    margin: 152px 0 0 0;
+    padding: 0 0 124px 0;
+}
+.webzine .tit h2 {
+    color: #0078E9;
+    margin: 0 0 10px 0;
+}
+.webzine .list {
+    margin: 56px 0 0 0;
+    width: calc(50% + 630px); /* 630px - 브라우저 사이즈 절반 */
+    border: 5px solid #1d1d1d;
+    position: relative;
+    left: calc(50% - 630px); /* 630px - 브라우저 사이즈 절반 */
+}
+@media screen and (max-width:640px) { 
+    /*  640px 이하 (포함)에서만 작동  */
+            .webzine {
+                background-color: #E6F0FD;
+                margin: 152px 0 0 0;
+                padding: 0 0 124px 0;
+            }
+            .webzine .tit h2 {
+                color: #0078E9;
+                margin: 0 0 10px 0;
+            }
+            .webzine .list {
+                margin: 56px 0 0 0;
+                width: calc(50% + 630px); /* 630px - 브라우저 사이즈 절반 */
+                border: 5px solid #1d1d1d;
+                position: relative;
+                left: calc(50% - 630px); /* 630px - 브라우저 사이즈 절반 */
+            }
+} /* @media */ 
+
+
+
+
+
 .news {
     margin: 110px 0 147px 0;
 }
@@ -449,7 +489,77 @@ header .tnb .lang {
 
 @media screen and (max-width:640px) {
         /* 640px 보다 작을떄만 (640포함) */
-            
+            .news {
+                margin: 105px 0 0 0;
+            }
+            .news .tit {
+                margin-right: 36px;
+                /* 더보기 아이콘들어갈 영역을 여백처리함
+                - 중복되어 보이지 않게 하기 위해서 */
+            }
+            .news .tit h2 {
+                color: #0078E9;
+                margin: 0 0 6px 0;
+            }
+            .news .list {
+                margin: 39px 0 0 0;
+            }
+            .news .list ul li {
+                margin: 10px 0 0 0;
+            }
+            .news .list ul li:nth-last-child(1),
+            .news .list ul li:nth-last-child(2) {
+                display: none; /* 마지막에서 첫번째, 두번째 숨김 */
+            }
+    
+            .news .list ul li a {
+                display: block; /* flex 해제 */
+                border: 1px solid #E6F0FD;
+                background-color: #E6F0FD;
+                padding: 30px 26px 20px 26px ; /* 박스 여백 */
+            }
+            .news .list ul li a .subject {
+                display: block; /* flex 해제 */
+                width: auto; 
+            }
+            .news .list ul li a .subject strong {
+                display:  inline-block; /* block 에서 inline-block 변경 */ 
+                color: #fff;
+                padding: 3px 15px;
+            }
+            .news .list ul li a .subject h3 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #1d1d1d;
+                width: auto ;
+                margin: 13px 0 3px 0 ;
+                /* 1줄 제한  > 무제한 줄바꿈*/
+                white-space: normal; /* 여러줄 허용 */
+                overflow: visible;
+            }
+            .news .list ul li a .date {
+                width: 145px; /*제목끝에서 + 날짜넓이까지의 여백 */
+            }
+            .news .more {
+                position: absolute; /* wrapper 기준으로 정렬 */
+                top: 24px;
+                right: 0;
+                border-radius: 50%;
+                padding: 0;
+                height: 34px;
+                width: 34px;
+            }
+            .news .more span {
+                display: none; /* 글자 숨김 */
+            }
+            .news .more::after { 
+                /* 아이콘 가운데 정렬 */
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                background-size: 22px;
+            }
 }/* @media */
 
 
