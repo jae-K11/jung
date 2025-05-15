@@ -345,7 +345,7 @@ header .tnb .lang {
 .webzine {
     background-color: #E6F0FD;
     margin: 152px 0 0 0;
-    padding: 0 0 124px 0;
+    padding: 124px 0 173px 0;
 }
 .webzine .tit h2 {
     color: #0078E9;
@@ -353,30 +353,60 @@ header .tnb .lang {
 }
 .webzine .list {
     margin: 56px 0 0 0;
-    width: calc(50% + 630px); /* 630px - 브라우저 사이즈 절반 */
-    border: 5px solid #1d1d1d;
-    position: relative;
+    width: calc(50% + 630px); /* 630px - 브라우저 사이즈 절반 */ㄴ
+    position: relative; /*  공간만 차지함 */
     left: calc(50% - 630px); /* 630px - 브라우저 사이즈 절반 */
 }
-@media screen and (max-width:640px) { 
+.webzine .list ul {
+    display: flex; 
+    gap:24px; /* 이미지가 밖으로 뛰쳐나가 justify-content: space-between; 못줌 */
+}
+.webzine .list ul li {
+    width: 297px; /* 브라우저를 줄이면 여백이 고정되고 너비도 고정이라 calc안줌*/
+}
+.webzine .list ul li a {
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* 위쪽 이미지 둥근거 없어서 자르면 둥근거 들어감 */
+}
+.webzine .list ul li a .photo {
+    overflow: hidden; /* photo 있으면 줘야함*/
+    height: 250px;
+}
+.webzine .list ul li a .photo img {
+     /* 이미지 꽉채우면서 비율유지*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+
+
+
+
+@media screen and (max-width:640px) {
     /*  640px 이하 (포함)에서만 작동  */
             .webzine {
                 background-color: #E6F0FD;
-                margin: 152px 0 0 0;
-                padding: 0 0 124px 0;
+                margin: 50px 0 0 0;
+                padding: 109px 0 48px 0;
             }
             .webzine .tit h2 {
-                color: #0078E9;
-                margin: 0 0 10px 0;
+                margin: 0 0 6px 0;
             }
             .webzine .list {
                 margin: 56px 0 0 0;
-                width: calc(50% + 630px); /* 630px - 브라우저 사이즈 절반 */
-                border: 5px solid #1d1d1d;
-                position: relative;
-                left: calc(50% - 630px); /* 630px - 브라우저 사이즈 절반 */
-            }
+                width: calc(100% - 20px); /*모바일 왼쪽여백 20px */
+                left: 20px; /* 왼쪽여백 */
+            }    
 } /* @media */ 
+
+
+
+
 
 
 
