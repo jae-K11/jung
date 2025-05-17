@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 자바스크립트는 브라우저에 내장된 기능이라 그냥 사용이 가능하지만 
+     jquery는 jquery를 동작하게 하는 파일을 불러와야 동작함 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/js_250515.js"></script>
+    <!-- js는 반드시 jquery 라이브러리를 먼저 호출하고 다음에 호출해야함-->
+    <link rel="stylesheet" href="css/js_250515.css">
     <title>javascript 테스트</title>
 </head>
 <body>
-    <h1>자바스크립트 테스트</h1>
+    <div class="wrapper">
+        <header>header</header>
+        <main class="container">
+            <h1>자바스크립트 테스트</h1>
+            <div class="box" title="박스 안녕">박스</div>
+            <div class="group ">group <span>오버전</span></div>
+            <div class="list">
+                <ul>
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                </ul>
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+
     <script>
+        // $('.box').addClass('bg_red')
+        // $('.box').removeClass('bg_red')
+        // $('.box').width(1000)
+
+        $('.box').on('mouseenter', function(){
+            //box에 마우스를 오버할떄마다 실행 
+            $('.box').addClass('bg_red')
+        })
+        $('.box').on('mouseleave', function(){
+            //box에 마우스를 올렸다가 내렸을때마다 실행
+            $('.box').removeClass('bg_red')
+        })
+
+
         var num = 3;
         num = 5;
         console.log(num);
@@ -33,7 +69,19 @@
             console.log('num1은 5이거나 5보다 작다')
         }
 
+        let index = 10
+        if(index > 10){
+            console.log('index는 10보다 크다')
+        }else if(index < 10){
+            console.log('index는 10보다 작다')
+        }else{
+            console.log('index는 10이다')
+        }
 
+        let box_name
+        box_name = $('.box').attr('title')
+        console.log(box_name)
+        $('.box').attr('title','title변경')
     </script>
 </body>
 </html>
