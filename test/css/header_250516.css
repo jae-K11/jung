@@ -1,0 +1,58 @@
+@import url(default.css);
+@import url(res_common.css);
+@import url(font.css);
+
+header {
+    position: fixed; /* 상단고정 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+
+header .wrapper {
+    display: flex; /* logo, gnb, tnb 좌우배치 */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    display: block;
+    width: 182px;
+    height: 71px;
+    background: url(../image/logo_w.svg) no-repeat center center / contain;
+    /* contain - 로고를 안짤리고 영역에 맞게 리사이즈 */
+}
+
+.visual {
+    height: 100vh; /* 브라우저 화면의 전체의 높이*/
+    background: url(../image/visual_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    border: 1px solid transparent; /* 투명한 1px border - margin이 영역밖으로 못나가게 하는 방법 */
+}
+.visual h2 {
+    padding: 60vh 0 0 0; /*540/900*100 =60vh*/
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:640px){
+            .visual h2 {
+                margin: 50vh 0 0 0; /*350/700(비주얼높이)*100 = 50vh*/
+                transform: translateY(-50%);
+                /* 나의 높이 절반을 거꾸로 위로 이동 */
+                font-size: 30px;
+                text-align: center;
+            }
+}/*@media*/
+
+
+
+
+
+
+footer{
+    margin: 3000px 0 0 0;
+}
