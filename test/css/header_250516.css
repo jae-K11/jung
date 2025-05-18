@@ -8,7 +8,9 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 100;
+    transition: 0.5s;
 }
 
 header .wrapper {
@@ -23,7 +25,115 @@ header .logo a {
     height: 71px;
     background: url(../image/logo_w.svg) no-repeat center center / contain;
     /* contain - 로고를 안짤리고 영역에 맞게 리사이즈 */
+    transition: 0.5s;
 }
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만  나옴 */
+} 
+
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex; /* li를 좌우로 배치 */
+}
+
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    /* 1차메뉴 a */
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100px; /* header 높이와 동일 */
+    color:#fff;
+    padding: 0 34px ;
+    transition: 0.5s;
+}
+
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    display: none; /* 숨김 */
+}
+
+header .tnb .search {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_163' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E%3Crect width='32' height='32' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_163)'%3E%3Cpath d='M12.6667 21.3333C10.2444 21.3333 8.19444 20.4944 6.51667 18.8167C4.83889 17.1389 4 15.0889 4 12.6667C4 10.2444 4.83889 8.19444 6.51667 6.51667C8.19444 4.83889 10.2444 4 12.6667 4C15.0889 4 17.1389 4.83889 18.8167 6.51667C20.4944 8.19444 21.3333 10.2444 21.3333 12.6667C21.3333 13.6444 21.1778 14.5667 20.8667 15.4333C20.5556 16.3 20.1333 17.0667 19.6 17.7333L27.0667 25.2C27.3111 25.4444 27.4333 25.7556 27.4333 26.1333C27.4333 26.5111 27.3111 26.8222 27.0667 27.0667C26.8222 27.3111 26.5111 27.4333 26.1333 27.4333C25.7556 27.4333 25.4444 27.3111 25.2 27.0667L17.7333 19.6C17.0667 20.1333 16.3 20.5556 15.4333 20.8667C14.5667 21.1778 13.6444 21.3333 12.6667 21.3333ZM12.6667 18.6667C14.3333 18.6667 15.75 18.0833 16.9167 16.9167C18.0833 15.75 18.6667 14.3333 18.6667 12.6667C18.6667 11 18.0833 9.58333 16.9167 8.41667C15.75 7.25 14.3333 6.66667 12.6667 6.66667C11 6.66667 9.58333 7.25 8.41667 8.41667C7.25 9.58333 6.66667 11 6.66667 12.6667C6.66667 14.3333 7.25 15.75 8.41667 16.9167C9.58333 18.0833 11 18.6667 12.6667 18.6667Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+/****************** header가 고정되었을때 *******************/
+
+header.fixed  {
+    border-bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+}
+
+header.fixed .logo a {
+    background-image: url(../image/logo_c.svg);
+    /*
+        background로 선언하고 배경이미지, 반복, 위치, 크기를 
+        지정했는데 이떄 이미지만 변경하고 반드시 backgroung-image 라고 속성을 쓰고 변경해야함
+        background라고 하면 모든 반복,위치,크기 등의 다른 속성이 취소됨... 
+    */
+}
+
+header.fixed .gnb .gnb_wrap ul.depth1 > li > a {
+    color: #1d1d1d;
+}
+
+header.fixed .tnb .search {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_163' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E%3Crect width='32' height='32' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_163)'%3E%3Cpath d='M12.6667 21.3333C10.2444 21.3333 8.19444 20.4944 6.51667 18.8167C4.83889 17.1389 4 15.0889 4 12.6667C4 10.2444 4.83889 8.19444 6.51667 6.51667C8.19444 4.83889 10.2444 4 12.6667 4C15.0889 4 17.1389 4.83889 18.8167 6.51667C20.4944 8.19444 21.3333 10.2444 21.3333 12.6667C21.3333 13.6444 21.1778 14.5667 20.8667 15.4333C20.5556 16.3 20.1333 17.0667 19.6 17.7333L27.0667 25.2C27.3111 25.4444 27.4333 25.7556 27.4333 26.1333C27.4333 26.5111 27.3111 26.8222 27.0667 27.0667C26.8222 27.3111 26.5111 27.4333 26.1333 27.4333C25.7556 27.4333 25.4444 27.3111 25.2 27.0667L17.7333 19.6C17.0667 20.1333 16.3 20.5556 15.4333 20.8667C14.5667 21.1778 13.6444 21.3333 12.6667 21.3333ZM12.6667 18.6667C14.3333 18.6667 15.75 18.0833 16.9167 16.9167C18.0833 15.75 18.6667 14.3333 18.6667 12.6667C18.6667 11 18.0833 9.58333 16.9167 8.41667C15.75 7.25 14.3333 6.66667 12.6667 6.66667C11 6.66667 9.58333 7.25 8.41667 8.41667C7.25 9.58333 6.66667 11 6.66667 12.6667C6.66667 14.3333 7.25 15.75 8.41667 16.9167C9.58333 18.0833 11 18.6667 12.6667 18.6667Z' fill='%231d1d1d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+
+@media screen and (max-width:640px){
+
+        header {
+            height: 56px;
+            border: 0;
+        }
+
+        header .wrapper {
+            margin-right: 0;
+            /* 오른쪽 여백 삭제 - gnb_open 배치하려고 */
+        }
+
+        header .logo a {
+            width: 90px;
+            height: 35px;
+        }
+
+        header .gnb .gnb_open {
+            display: block; /* 모바일에서만  나옴 */
+            width: 56px;
+            height: 56px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_389' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_389)'%3E%3Cpath d='M4 21C3.71667 21 3.47917 20.9042 3.2875 20.7125C3.09583 20.5208 3 20.2833 3 20C3 19.7167 3.09583 19.4792 3.2875 19.2875C3.47917 19.0958 3.71667 19 4 19H20C20.2833 19 20.5208 19.0958 20.7125 19.2875C20.9042 19.4792 21 19.7167 21 20C21 20.2833 20.9042 20.5208 20.7125 20.7125C20.5208 20.9042 20.2833 21 20 21H4ZM4 13C3.71667 13 3.47917 12.9042 3.2875 12.7125C3.09583 12.5208 3 12.2833 3 12C3 11.7167 3.09583 11.4792 3.2875 11.2875C3.47917 11.0958 3.71667 11 4 11H20C20.2833 11 20.5208 11.0958 20.7125 11.2875C20.9042 11.4792 21 11.7167 21 12C21 12.2833 20.9042 12.5208 20.7125 12.7125C20.5208 12.9042 20.2833 13 20 13H4ZM4 5C3.71667 5 3.47917 4.90417 3.2875 4.7125C3.09583 4.52083 3 4.28333 3 4C3 3.71667 3.09583 3.47917 3.2875 3.2875C3.47917 3.09583 3.71667 3 4 3H20C20.2833 3 20.5208 3.09583 20.7125 3.2875C20.9042 3.47917 21 3.71667 21 4C21 4.28333 20.9042 4.52083 20.7125 4.7125C20.5208 4.90417 20.2833 5 20 5H4Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: 0.5s;
+        }
+
+        header .gnb .gnb_wrap {
+            display: none; /* 숨김 */
+        }
+        header .tnb {
+            display: none; /* 숨김 */
+        }
+
+    /****************** header가 고정되었을때 *******************/
+            
+            header.fixed .gnb .gnb_open {
+            display: block; /* 모바일에서만  나옴 */
+            width: 56px;
+            height: 56px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_389' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_389)'%3E%3Cpath d='M4 21C3.71667 21 3.47917 20.9042 3.2875 20.7125C3.09583 20.5208 3 20.2833 3 20C3 19.7167 3.09583 19.4792 3.2875 19.2875C3.47917 19.0958 3.71667 19 4 19H20C20.2833 19 20.5208 19.0958 20.7125 19.2875C20.9042 19.4792 21 19.7167 21 20C21 20.2833 20.9042 20.5208 20.7125 20.7125C20.5208 20.9042 20.2833 21 20 21H4ZM4 13C3.71667 13 3.47917 12.9042 3.2875 12.7125C3.09583 12.5208 3 12.2833 3 12C3 11.7167 3.09583 11.4792 3.2875 11.2875C3.47917 11.0958 3.71667 11 4 11H20C20.2833 11 20.5208 11.0958 20.7125 11.2875C20.9042 11.4792 21 11.7167 21 12C21 12.2833 20.9042 12.5208 20.7125 12.7125C20.5208 12.9042 20.2833 13 20 13H4ZM4 5C3.71667 5 3.47917 4.90417 3.2875 4.7125C3.09583 4.52083 3 4.28333 3 4C3 3.71667 3.09583 3.47917 3.2875 3.2875C3.47917 3.09583 3.71667 3 4 3H20C20.2833 3 20.5208 3.09583 20.7125 3.2875C20.9042 3.47917 21 3.71667 21 4C21 4.28333 20.9042 4.52083 20.7125 4.7125C20.5208 4.90417 20.2833 5 20 5H4Z' fill='%233d3d3d'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+}/*@media*/
+
+
 
 .visual {
     height: 100vh; /* 브라우저 화면의 전체의 높이*/
