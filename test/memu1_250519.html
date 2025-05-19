@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/meun1_250519.css">
+    <script src="js/jquery-3.7.1.min.js"></script> <!--jquery 라이브러리 먼저-->
+    <script src="js/menu1_250519.js"></script>
+    <title>메뉴구현 - 마우스를 오버하면 오버한메뉴의 하위메뉴만 나옴</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 메뉴에 마우스를 오버하면
+            header에 menu_over 클래스 추가
+            오버한 1차 메뉴 li에 over 클래스를 추가 
+            
+            모바일에서 메뉴열기를 클릭하면
+            header에 menu_open 클래스 추가
+            1차메뉴를 클릭하면 하위메뉴를 열어줌 
+            클릭한 1차메뉴 li에 open 클래스를 추가 -->
+            <header>
+              <div class="wrapper">
+                <h1 class="logo"><a href="#"><span class="blind">로고</span></a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1"><!--1차메뉴-->
+                            <li>
+                                <a href="https://www.naver.com/"><span>기업소개</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#"><span>인사말</span></a></li>
+                                    <li><a href="#"><span>연혁</span></a></li>
+                                    <li><a href="#"><span>찾아오시는 길</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com/"><span>사업분야</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#"><span>건축사업</span></a></li>
+                                    <li><a href="#"><span>기부사업</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com/"><span>소식</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#"><span>공지사항</span></a></li>
+                                    <li><a href="#"><span>FAQ</span></a></li>
+                                    <li><a href="#"><span>묻고답하기</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com/"><span>인재채용</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#"><span>인재상</span></a></li>
+                                    <li><a href="#"><span>직무소개</span></a></li>
+                                    <li><a href="#"><span>채용공고</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+                </nav>
+                <div class="tnb">
+                    <button class="search"><span class="blind">검색</span></button>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="wrapper">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
