@@ -30,6 +30,33 @@ header .gnb .gnb_open,
 header .gnb .gnb_close {
     display: none; /* 모바일에서만 나옴 */
 }
+
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 > li {
+    position: relative; /* 2차메뉴 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a { /* 1차메뉴*/
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100px; /* haeder 높이 */
+    padding: 0px 34px;
+}
+header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
+    /* 2차메뉴 - 꼭  absolute로 코딩하는게 좋음 */
+    position: absolute; /* li를 기준으로 정렬 */
+    top: 89px;
+
+    /* 2차메뉴가 길어도 1차메뉴와 가운데 정렬로 배치*/
+    left: 50%; /* 정렬의 기준 li 넓이의 절반 */
+    transform: translateX(-50%); /* 2차메뉴 넓이의 절반*/
+    background-color: #0059FF;
+    border-radius: 10px;
+    padding: 30px 21px;
+    text-align: center;
+    display: none; /* 마우스를 오버할떄만 나타남 */
+}
 header .tnb .search {
     display: block;
     width: 60px;
