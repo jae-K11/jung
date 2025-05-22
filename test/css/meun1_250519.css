@@ -65,7 +65,12 @@ header .tnb .search {
     background-repeat: no-repeat;
     background-position: center center;
 }
+@media screen and (min-width:1025px) {
 
+}
+@media screen and (max-width:1024px) {
+
+}/* @media */
 
 .visual {
     height: 100vh;
