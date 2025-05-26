@@ -1,0 +1,73 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+.visual .swiper-slide {
+    height: 800px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.visual .swiper-slide.popup1 {
+    background-image: url(../image/popup01.jpg);
+}
+.visual .swiper-slide.popup2 {
+    background-image: url(../image/popup02.jpg);
+}
+.visual .swiper-slide.popup3 {
+    background-image: url(../image/popup03.jpg);
+}
+.visual h3 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 331px 0 28px 0;
+}
+.visual .paging {
+    position: absolute; /* swiper 기준으로 정렬*/
+    left: 0;
+    z-index: 10;
+    bottom: 19px; /* 버튼 밑 여백*/
+    width: 100%;
+    display: flex; /* span태그 좌우 배치 */
+    justify-content: center; /* 가운데 */
+    gap: 5px;
+}
+.visual .paging .swiper-pagination-bullet { /* 동그라미 기본 스타일 */
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0;
+    background: none;
+    opacity: 1;
+} 
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    /* 현재 팝업 동그라미 */
+    background-color: #fff;
+}
+.visual .btn_prev {
+    position: absolute; /* swiper 기준으로 정렬 */
+    left: 20px;
+    top: 365px; /* 버튼 윗 여백 */
+    z-index: 10;
+    width: 30px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='50' viewBox='0 0 30 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 50L0 25L25 0L29.4375 4.4375L8.875 25L29.4375 45.5625L25 50Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.visual .btn_next {
+    position: absolute; /* swiper 기준으로 정렬 */
+    right: 20px;
+    top: 365px; /* 버튼 윗 여백 */
+    z-index: 10;
+    width: 30px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='50' viewBox='0 0 30 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 50L0 25L25 0L29.4375 4.4375L8.875 25L29.4375 45.5625L25 50Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+}
