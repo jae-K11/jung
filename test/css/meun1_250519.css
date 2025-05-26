@@ -92,7 +92,7 @@ header .logo a {
                 background-repeat: no-repeat;
             }
             header .gnb .gnb_wrap {
-                display: block;
+                display: none;
                 position: fixed; 
                 /*fixed : 무조권 body를 기준으로 정렬 - header가 고정이 아니더라도
                 메뉴는 모바일에서 일단 열리면 고정이 되어야함 */
@@ -142,10 +142,9 @@ header .logo a {
             header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
                 display: block;
                 padding: 5px 0; /* 위아래 여백 ,행간 사이즈 */
-
             }
             header .gnb .gnb_close {
-                display: block;
+                display: none;
                 position: fixed; /* body를 기준으로 정렬*/
                 right: 0;
                 top: 0;
@@ -174,6 +173,11 @@ header .logo a {
     padding: 40vh 0 0 0;
 }
 
+@media screen and (max-width:768spx) {
+    .visual p {
+    font-size: 20px;
+    }
+}
 footer {
     margin: 2000px 0 0 0;
 }
