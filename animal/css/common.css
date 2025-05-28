@@ -1,0 +1,47 @@
+/* 모든 페이지에 공통적으로 들어가는 기본 스타일 */
+body {
+    font-family: "SOYOMaple", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5; /* 배수 */
+    color:#555;
+    word-break: keep-all;
+    word-wrap: break-word;
+    /* 단어가 너무 긴 경우 강제로 줄바꿈을 함 */
+}  
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+#wrap {
+    position: relative; /* header 정렬의 기준 */
+    overflow-x: hidden; /* swiper때문에, 가로스크롤 삭제 ,x-가로만 */
+    width: 100%;
+}
+@media screen and (max-width:1300px) { 
+    /* 20 + 20 = 40 +1260 = 1300*/
+
+    /* 1260 * 0.05(5%) = 63
+    63 + 63 = 126 
+    126 + 1260 = 1386 */
+    .wrapper {
+        width: auto;
+        margin: 0 20px
+    }
+}
+@media screen and (max-width:768px) {
+    /* 브라우저 넓이가 640px이하에서만 작동 */
+            body {
+                font-size: 16px;
+            }
+}
+/* 글자를 숨겨야 하는 경우 blind 클래스를 적용 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    color: transparent; /* 칼라 투명 */
+}
