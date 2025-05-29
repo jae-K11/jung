@@ -20,6 +20,7 @@
 }
 .visual .swiper-slide .wrapper {
     height: 700px;
+    display: flex;
 
 }
 .visual .swiper-slide p {

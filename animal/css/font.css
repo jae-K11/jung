@@ -2,10 +2,10 @@
 @font-face {
 	font-family: "SOYOMaple";
 	font-weight: 400;
-    src: url(../font/SOYOMapleRegularTTF.woff2) format("woff2");
+    src: url("../font/SOYOMapleRegularTTF.woff2") format("woff2");
 }
 @font-face {
 	font-family: "SOYOMaple";
 	font-weight: 700;
-	src: url(../font/SOYOMapleRegularTTF.woff2) format("woff2");
+	src: url("../font/SOYOMapleBoldTTF.woff2") format("woff2");
 }
