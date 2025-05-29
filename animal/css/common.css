@@ -26,7 +26,7 @@ body {
     126 + 1260 = 1386 */
     .wrapper {
         width: auto;
-        margin: 0 20px
+        margin: 0 20px;
     }
 }
 @media screen and (max-width:768px) {
