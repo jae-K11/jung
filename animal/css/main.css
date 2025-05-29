@@ -2,3 +2,10 @@
 @import url(font.css);
 @import url(common.css);
 
+
+.visual .swiper-slide {
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

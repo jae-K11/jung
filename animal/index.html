@@ -6,14 +6,55 @@
     <!-- jquery 라이브러리 -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- swiper 라이브러리 -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script> <!--swiper 돌아가게 해주는것 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> <!-- swiper 만들어주는것 -->
 
-    
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
-    <title>동물보호센터</title>
+    <title>동물보호센터 반응형형</title>
 </head>
 <body>
-    https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
+    <div class="skip_nav">
+        <a href="#skip_content">본문바로가기</a>
+        <!-- id= "skip_content"인 요소인 바로가기 (내부링크)-->
+    </div>
+    <div id="wrap">
+        <header></header>
+        <main class="container">
+            <section class="visual">
+                <h2 class="blind">팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <p>반려동물 입양 <br>사랑의 시작입니다</p>
+                                </div>
+                        </li>
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <p>작은 관심이 실종 동물에게<br>큰 희망이 됩니다 </p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg3">
+                            <div class="wrapper">
+                                <p>함께 살아가는 세상을 위해<br>당신의 따뜻한 선택을 기다려요</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap">
+                        <button class="btn_prev"><span class="">이전팝업보기</span></button>
+                        <button class="btn_next"><span class="">다음팝업보기</span></button>
+                        <button class="btn_stop"><span class="">일시정지</span></button>
+                        <button class="btn_play"><span class="">다시시작</span></button>
+                    </div><!--//btn_wrap-->
+                </div><!--//swiper-->  
+            </section><!--//visual-->
+            <section class="find" id="skip_content"></section><!--//find-->
+            <section class="slogan"></section><!--//slogan-->
+            <section class="adopt"></section><!--//adopt-->
+            <section class="review"></section><!--//review-->
+        </main>
+        <footer></footer>
+    </div>
 </body>
 </html>
