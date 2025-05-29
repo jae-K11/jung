@@ -9,3 +9,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.visual .swiper-slide.bg1 {
+    background-image: url(../images/visual_bg1.jpg);
+}
+.visual .swiper-slide.bg2 {
+    background-image: url(../images/visual_bg2.jpg);
+}
+.visual .swiper-slide.bg3 {
+    background-image: url(../images/visual_bg3.jpg);
+}
+.visual .swiper-slide .wrapper {
+    height: 700px;
+
+}
+.visual .swiper-slide p {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+}
