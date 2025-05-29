@@ -22,8 +22,8 @@ $(document).ready(function(){
         
 
         navigation: {  /* 이전, 다음 버튼 */
-            nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
-            prevEl: '.swiper-button-prev',  
+            nextEl: '.visual .btn_wrap button.btn_next ',  /* 다음 버튼의 클래스명 */
+            prevEl: '.visual .btn_wrap button.btn_prev',  
         },
 
     });
@@ -38,7 +38,7 @@ $(document).ready(function(){
     $('.visual .btn_wrap button.btn_play').on('click', function(){
         console.log('재생버튼 클릭')
         visual_swiper.autoplay.start();  /* 재생 기능 */
-        $(this).hide()// 재생버튼 자신 숨김
+        $(this).hide()// 재생버튼 자신은 숨김
         $('.visual .btn_wrap button.btn_stop').show()//정지버튼 나타냄
 
     })
