@@ -2,6 +2,76 @@
 @import url(font.css);
 @import url(common.css);
 
+header {
+    position: fixed; /* body를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    display: flex; /* gnb 와 util 좌우로 배치 */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* @media 의 wrapper가 margin 20px 이라서 
+    브라우저 사이즈가 줄어들떄 맞아보임 */
+}
+header .logo a {
+    display: block;
+    height: 37px;
+    width: 186px;
+    background: url(../images/logo_w.svg) no-repeat center center / contain ;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만 보이고 숨김 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+     display: flex; /* li들을 좌우로 배치 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    line-height: 100px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0 29px; /* 여백의 반띵 */
+    position: relative;
+}
+header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span {
+    /* li하위에 depth2가 있는 a만 */
+    display: block;
+    padding-right: 23px; /* 아이콘이 들어갈 여백 */
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 16px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5.85597L13.5125 0.343466C13.7 0.155966 13.9219 0.0653414 14.1781 0.0715914C14.4344 0.0778415 14.6562 0.174716 14.8437 0.362216C15.0312 0.549716 15.125 0.771591 15.125 1.02784C15.125 1.28409 15.0312 1.50597 14.8437 1.69347L9.06875 7.44972C8.91875 7.59972 8.75 7.71222 8.5625 7.78722C8.375 7.86222 8.1875 7.89972 8 7.89972C7.8125 7.89972 7.625 7.86222 7.4375 7.78722C7.25 7.71222 7.08125 7.59972 6.93125 7.44972L1.15625 1.67472C0.968749 1.48722 0.878123 1.26847 0.884373 1.01847C0.890623 0.768466 0.987498 0.549716 1.175 0.362216C1.3625 0.174716 1.58437 0.0809659 1.84062 0.0809659C2.09687 0.0809659 2.31875 0.174716 2.50625 0.362216L8 5.85597Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+ 
+header .gnb .gnb_wrap ul.depth1 > li >ul.depth2 {
+    display: none; /* 2차메뉴 숨김 */
+}
+
+
+
+header .util .search .search_open {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_42_46' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E%3Crect width='32' height='32' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_42_46)'%3E%3Cpath d='M12.6667 21.3333C10.2444 21.3333 8.19444 20.4944 6.51667 18.8167C4.83889 17.1389 4 15.0889 4 12.6667C4 10.2444 4.83889 8.19444 6.51667 6.51667C8.19444 4.83889 10.2444 4 12.6667 4C15.0889 4 17.1389 4.83889 18.8167 6.51667C20.4944 8.19444 21.3333 10.2444 21.3333 12.6667C21.3333 13.6444 21.1778 14.5667 20.8667 15.4333C20.5556 16.3 20.1333 17.0667 19.6 17.7333L27.0667 25.2C27.3111 25.4444 27.4333 25.7556 27.4333 26.1333C27.4333 26.5111 27.3111 26.8222 27.0667 27.0667C26.8222 27.3111 26.5111 27.4333 26.1333 27.4333C25.7556 27.4333 25.4444 27.3111 25.2 27.0667L17.7333 19.6C17.0667 20.1333 16.3 20.5556 15.4333 20.8667C14.5667 21.1778 13.6444 21.3333 12.6667 21.3333ZM12.6667 18.6667C14.3333 18.6667 15.75 18.0833 16.9167 16.9167C18.0833 15.75 18.6667 14.3333 18.6667 12.6667C18.6667 11 18.0833 9.58333 16.9167 8.41667C15.75 7.25 14.3333 6.66667 12.6667 6.66667C11 6.66667 9.58333 7.25 8.41667 8.41667C7.25 9.58333 6.66667 11 6.66667 12.6667C6.66667 14.3333 7.25 15.75 8.41667 16.9167C9.58333 18.0833 11 18.6667 12.6667 18.6667Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 
 .visual .swiper-slide {
     color: #fff;
