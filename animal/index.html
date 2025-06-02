@@ -18,6 +18,10 @@
         
         <!-- id= "skip_content"인 요소인 바로가기 (내부링크)-->
     </div>
+    <div class="skip_nav">
+        <a href="#skip_content">본문바로가기</a>
+        <!-- id= "skip_content"인 요소로 바로가기(내부링크)-->
+    </div>
     <div id="wrap">
         <!--
             header 마우스를 오버하거나..스크롤을 내리면 - fixed 클래스 추가
@@ -98,7 +102,225 @@
                     </div><!--//btn_wrap-->
                 </div><!--//swiper-->  
             </section><!--//visual-->
-            <section class="find" id="skip_content"></section><!--//find-->
+            <section class="find" id="skip_content">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>찾습니다</h2>
+                    </div>
+                     <div class="list">
+                        <div class="tap_list">
+                            <ul role="tablist">
+                                <!-- 선택된 li에는 active클래스 추가 , button에 선택됨이라고 써줌 
+                                     aria-selected가 true가 선택된것 , false 선택이 안된것 
+                                     data-content li를 눌렀을때 나타날 때 콘텐츠 id값 
+                                     li를 클릭했을때 data-content값을 호출해서 id가 같은 요소만 보이게함 
+                                     data-content 는 내맘대로 속성을 추가 ..(값을  저장할 공간이 필요해서 - 표준위배 )
+                                     data-link 라던가 .. data-value 이렇게 data가 들어간 속성은 퍼블이 만든 속성 -->
+                                <li role="tab" aria-selected="true" class="item1 " data-content="tab_item1"><button>가족을<span class="blind">선택됨</span></button></li>
+                                <li role="tab" aria-selected="false" class="item2 active" data-content="tab_item2"><button>주인을</button></li>
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <!-- 가족을, 주인을 탭콘텐츠를 구분 item1/item2로 클래스명 구분
+                                 현재 선택된 탭 콘텐츠는 active 클래스 추가 -->
+                            <div class="tab_item item1 active" id="tab_item1">
+                                <h3 class="blind">가족을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find01.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>믹스 푸들 암컷 </h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 마포구 월드컵공원서울특별시 마포구 월드컵공원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-09</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>흰색 곱슬 배쪽에 점있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find02.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>말티즈 수컷</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 수원시 스타벅스 근처경기도 수원시 스타벅스 근처...</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-20</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>미용한지 얼마 안지나 털이 짧음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find03.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_lost">실종</strong>
+                                                <h4>코카투 수컷</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 파주시 경의선숲길 대흥경기도 파주시 경의선숲길 대흥</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>025-05-06</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>꼬리 안쪽에 노란색 털 있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find04.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>러시안 블루 암컷</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>대구광역시 중구 국채보상공 GS주변에서 사라졌음</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-06</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>흰털이 조금 있음. 사람에게 친근하게 잘 다가가는 애교냥이</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab_item item2" id="tab_item2">
+                                <h3 class="blind">주인을 찾습니다</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find05.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_see">목격</strong>
+                                                <h4>숏 헤어 암컷 1살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>대구광역시 달성군 서재보성타대구광역시 달성군 서재보성타</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-22</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>꼬리가 꺽여 있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find06.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_end">종료</strong>
+                                                <h4>요크셔테리어 암컷</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>전라북도 김제시 죽산면 명마마을</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-18</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>갈색털과 회색털이 섞여있음 </span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find07.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_care">구조</strong>
+                                                <h4>뉴기니아 수컷2살</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 서대문구 남가좌동서울특별시 서대문구 남가좌동</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2025-05-06</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>부리가 금이 가져있음. 사람을 좋아함</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="photo"><img src="images/find08.jpg" alt=""></div>
+                                            <div class="subject">
+                                                <strong class="cate_see">목격</strong>
+                                                <h4>비글 암컷 4살추정</h4>
+                                            </div>
+                                            <ul class="detail">
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>대구광역시 중구 국채보상공 GS대구광역시 중구 국채보상공 GS</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span> 2025-05-01</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>사람을 좋아함. 미간에 주름 있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//tab_content-->
+                     </div><!--//list-->
+                </div><!--//wrapper-->
+            </section><!--//find-->
             <section class="slogan"></section><!--//slogan-->
             <section class="adopt"></section><!--//adopt-->
             <section class="review"></section><!--//review-->

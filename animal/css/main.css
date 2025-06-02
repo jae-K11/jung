@@ -2,6 +2,25 @@
 @import url(font.css);
 @import url(common.css);
 
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000; /* 맨위 */
+    width: 100%;
+}
+.skip_nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #C1121F;
+    color: #fff;
+    transform: translateX(-120%);
+}
+.skip_nav a:focus {
+    transform: translateX(0);
+}
+
 header {
     position: fixed; /* body를 기준으로 정렬 */
     left: 0;
@@ -84,6 +103,7 @@ header.fixed .logo a {
             padding: 0 32px; /* 녹색박스 */ 
             border-radius: 30px; 
         }
+        
         header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
             display: block;
             white-space: nowrap; /* 줄바꿈 금지 */
@@ -380,6 +400,95 @@ header.fixed .util .search .search_open {
         }
 }/*@media*/
 
+.find {
+    background-color: #0F4177;
+    color: #fff;
+    padding: 168px 0 138px 0;
+}
+.find .tit h2 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.find .list {
+    margin: 38px 0 0 0;
+}
+.find .list .tap_list ul {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+}
+.find .list .tap_list ul li button {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 8px 24px 12px 24px;
+    border-radius: 40px;
+}
+.find .list .tap_list ul li.item1.active button {
+    background-color: #F69B28;
+
+}
+.find .list .tap_list ul li.item2.active button {
+    background-color: #7BD5EE;
+}
+.find .list .tab_content {
+    margin: 56px 0 0 0;
+}
+.find .list .tab_content .tab_item > ul {
+    display: flex;
+    justify-content: space-between;
+}
+.find .list .tab_content .tab_item > ul > li {
+    width: calc(25% - 18px);
+    /* 100%/4 (1줄에 나타나는 li의갯수) = 25%
+    24+24+24(여백) /4 (1줄에 나타나는 li갯수) = 18px
+    */
+}
+.find .list .tab_content .tab_item > ul > li a {
+    display: block;
+}
+.find .list .tab_content .tab_item > ul > li a .photo {
+    overflow: hidden; /*photo 필수값*/
+    height: 370px;
+    border-radius: 20px;
+}
+.find .list .tab_content .tab_item > ul > li a .photo img {
+    /* 알아서 들어가라 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .list .tab_content .tab_item > ul > li a .subject {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0 0 0;
+}
+.find .list .tab_content .tab_item > ul > li a .subject strong {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 5px 18px 6px 18px;
+    border-radius: 40px;
+}
+.find .list .tab_content .tab_item > ul > li a .subject strong.cate_lost {
+    background-color: #F69B28;
+}
+.find .list .tab_content .tab_item > ul > li a .subject strong.cate_end {
+    background-color: #AEAEAE;
+}
+.find .list .tab_content .tab_item > ul > li a .subject strong.cate_see {
+    background-color: #7BD5EE;
+}
+.find .list .tab_content .tab_item > ul > li a .subject strong.cate_care {
+    background-color: #9CC712;
+}
+.find .list .tab_content .tab_item > ul > li a .subject h4 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
 footer {
     margin: 500px 0 0 0;
 }

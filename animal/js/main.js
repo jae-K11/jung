@@ -44,13 +44,13 @@ function resize_chk(){
 }
 
 /* header에 마우스를 오버했을때 -- 클릭했을떄도 작동함*/
-$('header').on('mouseenter', function(){
+$('header').on('mouseenter focusin', function(){
     if(device_status == 'pc'){
     $('header').addClass('fixed')
     console.log('너?')
     }
 })
-$('header').on('mouseleave', function(){
+$('header').on('mouseleave focusout', function(){
     /* <= 작거나 같으면 , 브라우저가 스크롤 된 상태에서는 header 가 fixed 클래스를 삭제하면 안됨
     맨 위에 있을때만 삭제해야함*/  
     if(scrolling <= 0){      
@@ -61,7 +61,7 @@ $('header').on('mouseleave', function(){
     
 })
 
-$('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+$('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
     if(device_status == 'pc'){
       //  console.log('오버했따')
         $(this).addClass('over')
@@ -71,6 +71,10 @@ $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave', function(){
    // console.log('마우스아웃')
     $(this).removeClass('over')
 }) 
+$('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child ').on('focusout', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+}) 
+
 
 $('header .gnb .gnb_open').on('click', function(){
     $('header').addClass('menu_open')
