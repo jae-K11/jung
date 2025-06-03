@@ -428,13 +428,18 @@ header.fixed .util .search .search_open {
 }
 .find .list .tap_list ul li.item1.active button {
     background-color: #F69B28;
-
 }
 .find .list .tap_list ul li.item2.active button {
     background-color: #7BD5EE;
 }
 .find .list .tab_content {
     margin: 56px 0 0 0;
+}
+.find .list .tab_content .tab_item {
+    display: none; /*숨김*/
+}
+.find .list .tab_content .tab_item.active {
+    display: block; /*표시*/
 }
 .find .list .tab_content .tab_item > ul {
     display: flex;
@@ -463,6 +468,7 @@ header.fixed .util .search .search_open {
 .find .list .tab_content .tab_item > ul > li a .subject {
     display: flex;
     gap: 16px;
+    align-items: center;
     margin: 20px 0 0 0;
 }
 .find .list .tab_content .tab_item > ul > li a .subject strong {
@@ -499,7 +505,7 @@ header.fixed .util .search .search_open {
     margin: 16px 0 0 0;
 }
 .find .list .tab_content .tab_item > ul > li a  ul.detail li {
-    display: flex; /* flex를 줘야지 1줄제한 같이 바뀜 */
+    display: flex;
     gap: 5px;
 }
 .find .list .tab_content .tab_item > ul > li a  ul.detail li strong {
