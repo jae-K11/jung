@@ -47,7 +47,7 @@ function resize_chk(){
 $('header').on('mouseenter focusin', function(){
     if(device_status == 'pc'){
     $('header').addClass('fixed')
-    console.log('너?')
+    //console.log('너?')
     }
 })
 $('header').on('mouseleave focusout', function(){
@@ -168,6 +168,12 @@ $('header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a').on('click', functio
         
          $('.find .list .tap_list ul li').removeClass('active')
          $(this).addClass('active')
+
+         $('.find .list .tap_list ul li button span').text('')
+         $(this).find('span').text('선택됨')
+
+         $('.find .list .tap_list ul li').attr('aria-selected', 'false')
+         $(this).attr('aria-selected', 'true')
         }
     })
      

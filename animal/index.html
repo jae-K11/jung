@@ -116,8 +116,8 @@
                                      li를 클릭했을때 data-content값을 호출해서 id가 같은 요소만 보이게함 
                                      data-content 는 내맘대로 속성을 추가 ..(값을  저장할 공간이 필요해서 - 표준위배 )
                                      data-link 라던가 .. data-value 이렇게 data가 들어간 속성은 퍼블이 만든 속성 -->
-                                <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button>가족을<span class="">선택됨</span></button></li>
-                                <li role="tab" aria-selected="false" class="item2 " data-content="tab_item2"><button>주인을<span class=""></span></button></li>
+                                <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button>가족을<span class="blind">선택됨</span></button></li>
+                                <li role="tab" aria-selected="false" class="item2 " data-content="tab_item2"><button>주인을<span class="blind"></span></button></li>
                             </ul>
                         </div>
                         <div class="tab_content">
@@ -321,7 +321,17 @@
                      </div><!--//list-->
                 </div><!--//wrapper-->
             </section><!--//find-->
-            <section class="slogan"></section><!--//slogan-->
+            <section class="slogan">
+                <div class="wrapper">
+                    <h2 class="blind">구조동물 발견 시 대처요령</h2>
+                    <p class="sub_tit">
+                        공공장소<span class="item1">공원</span>에서 주인 없이 떠도는<br>
+                        동물<span class="item2">동물</span>을 발견한 경우<br>
+                        관할 시군구청 또는 동물보호센터<span class="item3">건물</span>에<br> 
+                        신고<span class="item4">전화</span>하시기 바랍니다.</p>
+                    <p class="ex">※ 소유자를 알 수 없는 동물을 신고하지 않고 알선·구매하는 경우, 포획하여 팔거나 판매하거나 죽일 목적으로 포획하는 경우에는 동물보호법 제10조제3항제1호·제3호·제4호를 위반하여 2년 이하 징역이나 2천만원 이하 벌금이 부과됩니다.</p>
+                </div>
+            </section><!--//slogan-->
             <section class="adopt"></section><!--//adopt-->
             <section class="review"></section><!--//review-->
         </main>

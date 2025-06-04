@@ -362,18 +362,18 @@ header.fixed .util .search .search_open {
     display: none;   /* 정지버튼을 눌었을떄만 나옴 */
     background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_60_1913' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect x='10' y='10' width='10' height='10' transform='rotate(-180 10 10)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_60_1913)'%3E%3Cpath d='M7.36426 4.64616C7.42676 4.68783 7.47363 4.73991 7.50488 4.80241C7.53613 4.86491 7.55176 4.93088 7.55176 5.00033C7.55176 5.06977 7.53613 5.13574 7.50488 5.19824C7.47363 5.26074 7.42676 5.31283 7.36426 5.35449L3.96842 7.51074C3.9337 7.53158 3.89724 7.5472 3.85905 7.55762C3.82086 7.56803 3.7844 7.57324 3.74967 7.57324C3.63856 7.57324 3.54134 7.53331 3.45801 7.45345C3.37467 7.37359 3.33301 7.27463 3.33301 7.15658L3.33301 2.84408C3.33301 2.72602 3.37468 2.62706 3.45801 2.5472C3.54134 2.46734 3.63856 2.42741 3.74968 2.42741C3.7844 2.42741 3.82086 2.43262 3.85905 2.44303C3.89724 2.45345 3.9337 2.46908 3.96842 2.48991L7.36426 4.64616Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-@media screen and (max-width:1024px) {
+/* @media screen and (max-width:1024px) {
          .visual .swiper-slide .wrapper {
-            /* 글씨를 아래로 내리는경우  wrapper에게 줘야함*/
+            글씨를 아래로 내리는경우  wrapper에게 줘야함
             height: 600px;
             padding: 0 0 50px 0;
         }
         .visual .swiper-slide p {
-            font-size: 50px;
+            font-size: 55px;
         }
-}/*@media*/
+}@media */
 
-@media screen and (max-width:768px) { /* 모바일 */
+@media screen and (max-width:1024px) { /* 모바일 */
         .visual .swiper-slide .wrapper {
             /* 글씨를 아래로 내리는경우  wrapper에게 줘야함*/
             height: 500px;
@@ -519,119 +519,154 @@ header.fixed .util .search .search_open {
     text-overflow: ellipsis;
 }
 
-@media screen and (max-width:1024px) {
-
-}
-@media screen and (max-width:768px) {  /* 모바일 */
+@media screen and (max-width:1024px) { /* 모바일 */
     .find {
-        padding: 108px 0 0 0;
+        padding: 108px 0 69px 0;
     }
     .find .tit h2 {
         font-size: 30px;
     }
     .find .list {
-        margin: 38px 0 0 0;
+        margin: 21px 0 0 0;
     }
     .find .list .tap_list ul {
-        display: flex;
-        justify-content: center;
-        gap: 9px;
+        gap: 13px;
     }
     .find .list .tap_list ul li button {
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 1.2;
-        padding: 8px 24px 12px 24px;
-        border-radius: 40px;
-    }
-    .find .list .tap_list ul li.item1.active button {
-        background-color: #F69B28;
-    
-    }
-    .find .list .tap_list ul li.item2.active button {
-        background-color: #7BD5EE;
+        font-size: 20px;
+        padding: 6px 16px;
     }
     .find .list .tab_content {
-        margin: 56px 0 0 0;
+        margin: 37px 0 0 0;
     }
     .find .list .tab_content .tab_item > ul {
-        display: flex;
-        justify-content: space-between;
+        gap: 34px 16px; /*위아래 좌우여백 */
+        flex-wrap: wrap; /* li 줄바꿈 허용 */
     }
     .find .list .tab_content .tab_item > ul > li {
-        width: calc(25% - 18px);
-        /* 100%/4 (1줄에 나타나는 li의갯수) = 25%
-        24+24+24(여백) /4 (1줄에 나타나는 li갯수) = 18px
+        width: calc(50% - 8px);
+        /* 100%/2 (1줄에 나타나는 li의갯수) = 50%
+        16(여백) /2 (1줄에 나타나는 li갯수) = 8px
         */
     }
-    .find .list .tab_content .tab_item > ul > li a {
-        display: block;
-    }
     .find .list .tab_content .tab_item > ul > li a .photo {
-        overflow: hidden; /*photo 필수값*/
-        height: 370px;
-        border-radius: 20px;
-    }
-    .find .list .tab_content .tab_item > ul > li a .photo img {
-        /* 알아서 들어가라 */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 208px;
+        border-radius: 10px;
     }
     .find .list .tab_content .tab_item > ul > li a .subject {
-        display: flex;
-        gap: 16px;
-        margin: 20px 0 0 0;
+        position: relative; /* strong 카테고리 정렬의 기준 */
+        display: block;
+        margin: 12px 0 0 0;
     }
     .find .list .tab_content .tab_item > ul > li a .subject strong {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.2;
-        padding: 5px 18px 6px 18px;
-        border-radius: 40px;
-        white-space: nowrap; /* 제목 1줄제한 이었을때 너비가 없어서 날라감 요것두 줘야함*/
-    }
-    .find .list .tab_content .tab_item > ul > li a .subject strong.cate_lost {
-        background-color: #F69B28;
-    }
-    .find .list .tab_content .tab_item > ul > li a .subject strong.cate_end {
-        background-color: #AEAEAE;
-    }
-    .find .list .tab_content .tab_item > ul > li a .subject strong.cate_see {
-        background-color: #7BD5EE;
-    }
-    .find .list .tab_content .tab_item > ul > li a .subject strong.cate_care {
-        background-color: #9CC712;
+        position: absolute; /*subject 기준의 정렬*/
+        left: 0;
+        top: -43px;
+        font-size: 18px;
+        padding: 0 11px 0 11px;
+        border-radius: 10px;
+        line-height: 31px; /* 이미지 안에 알맞게 들어가려면
+        padding 위아래 여백주지말고,
+        top 43 - 12px(subject margin) = 31 값 
+        margin과 line-height가 더한값이  top 43임 */
     }
     .find .list .tab_content .tab_item > ul > li a .subject h4 {
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.2;
-    
-        /* 1줄 제한 */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 20px;
     }
     .find .list .tab_content .tab_item > ul > li a ul.detail {
-        margin: 16px 0 0 0;
+        margin: 12px 0 0 0;
     }
     .find .list .tab_content .tab_item > ul > li a  ul.detail li {
-        display: flex; /* flex를 줘야지 1줄제한 같이 바뀜 */
-        gap: 5px;
+        display: block;
+    }
+    .find .list .tab_content .tab_item > ul > li a  ul.detail li:last-child {
+        display: none; /* 마지막줄 li 숨김 */
     }
     .find .list .tab_content .tab_item > ul > li a  ul.detail li strong {
-        color: rgba(255,255,255,0.8);
-        white-space: nowrap; /* span의 줄바꿈제한 strong같이 줘야함 */
+        display: none;
     }
     .find .list .tab_content .tab_item > ul > li a ul.detail li span {
-        /* 1줄 제한 */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        display: block; /* flex없애고 block 주면 ... 들어감 */
+       color: rgba(255,255,255,0.8);
     }
-    
+} /*@media*/
+
+.slogan {
+    margin: 240px 0 187px 0;
 }
+.slogan .sub_tit {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #1d1d1d;
+    text-align: center;
+}
+.slogan .sub_tit span {
+    display: inline-block;
+    color: transparent; /* 높이를 잡아야해서 글자를 줬지만
+    글자는 필요없으므로 투명처리 */
+    position: relative; /* before  정렬의 기준 */
+}
+.slogan .sub_tit span::before {
+    content: "";
+    position: absolute; /*span기준의 정렬*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    /* span의 영역에 위아래 가운데, 좌우의 가운데*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.slogan .sub_tit span.item1::before {
+    width: 1.92em; /* 125px/65 */
+    height: 1.72em ; /* 112/65 */
+    background-image: url(../images/slogan01.png);
+}
+.slogan .sub_tit span.item2::before {
+    width: 2.87em;
+    height: 1.56em;
+    background-image: url(../images/slogan02.png);
+}
+.slogan .sub_tit span.item3::before {
+    width: 2.47em;
+    height: 1.70em;
+    background-image: url(../images/slogan03.png);
+}
+.slogan .sub_tit span.item4::before {
+    width: 2.12em;
+    height: 1.76em;
+    background-image: url(../images/slogan04.png);
+}
+
+.slogan .sub_tit span.item1 {
+    width: 3.09em;
+    /* 넓이가 201px - 글자크기 64px
+    201/64 = 3.09em 단위는 em
+    1em은 현재 해당 요소에 상속된 글지크기를 1로봄*/
+}
+.slogan .sub_tit span.item2 {
+    width: 3.25em;
+}
+.slogan .sub_tit span.item3 {
+    width: 2.92em;
+}
+.slogan .sub_tit span.item4 {
+    width: 2.92em;
+}
+.slogan .ex {
+    margin: 54px 0 0 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 footer {
     margin: 500px 0 0 0;
 }
