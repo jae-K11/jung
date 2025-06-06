@@ -659,6 +659,25 @@ header.fixed .util .search .search_open {
     text-align: center;
 }
 
+@media screen and (max-width:1024px) {
+     .slogan .sub_tit {
+            font-size: 40px;
+        }
+}
+@media screen and (max-width:768px) { /*모바일*/
+        .slogan {
+            margin: 108px 0 56px 0;
+        }
+        .slogan .sub_tit {
+            font-size: 25px;
+        }
+        .slogan .sub_tit br {
+            display: none; /* 줄바꿈 금지 */
+        }
+        .slogan .ex {
+            margin: 49px 0 0 0;
+        }
+}/*@media*/
 
 
 
