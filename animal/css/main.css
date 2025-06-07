@@ -16,6 +16,10 @@
     background-color: #C1121F;
     color: #fff;
     transform: translateX(-120%);
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
 }
 .skip_nav a:focus {
     transform: translateX(0);
