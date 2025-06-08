@@ -683,11 +683,131 @@ header.fixed .util .search .search_open {
         }
 }/*@media*/
 
+.adopt {
+    padding: 194px 0 283px 0;
+    background-color: #0F4177;
+    color: #fff;
+    text-align: center;
+    position: relative; /* rolling 정렬의 기준 */
+}
 
+.adopt .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+.adopt .list {
+    margin: 40px 0 0 0;    
+}
+.adopt .list .swiper-slide {
+    width: 300px; 
+    /* 이미지 동그라미 만드는법 - 너비 주고
+    js가서 slidesPerView 'auto'로 바꿔주고, pc버전slidesPerView은 지워도 되고 'auto'로 바꿔도ㅓ 됨*/
+}
+.adopt .list .swiper-slide a {
+    display: block;
+}
+.adopt .list .swiper-slide a .photo {
+    overflow: hidden; /*photo 필수값*/
+    height: 300px;
+    border-radius: 50%; /* 동그라미 */
+}
+.adopt .list .swiper-slide a .photo img {
+    /* 이미지에 맞게 알아서 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.adopt .list .swiper-slide a strong {
+    display: inline-block;
+    padding: 5px 18px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 40px;
+    background-color: #C1121F;
+    /* 분양,임보 이미지에 걸쳐놓는법 */
+    position: relative;
+    top: -15px;
+    /*transform: translateY(-15px) 도 줘도됨 */
+}
+.adopt .list .swiper-slide a .cata_care {
+    background-color: #F69B28;
+}
+.adopt .list .swiper-slide a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+.adopt .list .swiper-slide a p {
+    /* 1줄 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.adopt .list_ctrl {
+    margin: 48px 0 0 0;
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+}
+.adopt .list_ctrl button {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_42_140' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='19'%3E%3Crect x='17.875' y='18.4141' width='17.5963' height='17.5964' transform='rotate(-180 17.875 18.4141)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_42_140)'%3E%3Cpath d='M7.26204 9.6129L12.6509 15.0018C12.8342 15.1851 12.9228 15.402 12.9167 15.6525C12.9106 15.903 12.8159 16.1199 12.6326 16.3032C12.4493 16.4865 12.2324 16.5781 11.9819 16.5781C11.7314 16.5781 11.5145 16.4865 11.3312 16.3032L5.70403 10.6577C5.55739 10.511 5.44741 10.3461 5.3741 10.1628C5.30078 9.97949 5.26412 9.79619 5.26412 9.6129C5.26412 9.4296 5.30078 9.24631 5.3741 9.06301C5.44741 8.87972 5.55739 8.71475 5.70403 8.56811L11.3495 2.92262C11.5328 2.73932 11.7467 2.65073 11.9911 2.65684C12.2355 2.66295 12.4493 2.75765 12.6326 2.94094C12.8159 3.12424 12.9075 3.34114 12.9075 3.59164C12.9075 3.84215 12.8159 4.05905 12.6326 4.24234L7.26204 9.6129Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
 
+}
+.adopt .list_ctrl .btn_next {
+    transform: rotate(180deg); /* 반대로 */
+}
+.adopt .list_ctrl .more {
+    line-height: 26px; /* button 사이즈에 맞춤*/
+    height: 26px; /* button 사이즈에 맞춤*/
+    border: 1px solid #fff;
+    border-radius: 20px ;
+    padding: 0 29px 0 13px; /* 위아래 여백은 안들어감 */
+    position: relative; /* after */
+}
+.adopt .list_ctrl .more::after {
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_42_144' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect x='0.575195' y='0.494141' width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_42_144)'%3E%3Cpath d='M7.5752 12.7441C7.40992 12.7441 7.27138 12.6882 7.15957 12.5764C7.04776 12.4646 6.99186 12.3261 6.99186 12.1608V8.07747H2.90853C2.74325 8.07747 2.60471 8.02157 2.4929 7.90977C2.3811 7.79796 2.3252 7.65942 2.3252 7.49414C2.3252 7.32886 2.3811 7.19032 2.4929 7.07852C2.60471 6.96671 2.74325 6.91081 2.90853 6.91081H6.99186V2.82747C6.99186 2.6622 7.04776 2.52365 7.15957 2.41185C7.27138 2.30004 7.40992 2.24414 7.5752 2.24414C7.74047 2.24414 7.87901 2.30004 7.99082 2.41185C8.10263 2.52365 8.15853 2.6622 8.15853 2.82747V6.91081H12.2419C12.4071 6.91081 12.5457 6.96671 12.6575 7.07852C12.7693 7.19032 12.8252 7.32886 12.8252 7.49414C12.8252 7.65942 12.7693 7.79796 12.6575 7.90977C12.5457 8.02157 12.4071 8.07747 12.2419 8.07747H8.15853V12.1608C8.15853 12.3261 8.10263 12.4646 7.99082 12.5764C7.87901 12.6882 7.74047 12.7441 7.5752 12.7441Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.adopt .rolling {
+    position: absolute; /* adopt 기준의 정렬  */
+    left: 0;
+    bottom: 18px;
+    width: 100%;
+}
+.adopt .rolling p {
+    /* 돌돌 돌아가는 애니메이션 줄때 */
+    position: absolute; /* absolute안에 absolute들어가게되면 감싸고 있는 애가 높이를 못잡음 */
+    left: 0;
+    bottom: 0;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.1);
+    white-space: nowrap; /* 줄바꿈 금지 ,1줄 */
 
-
-
+    animation-name: rolling;
+    animation-duration: 10s; 
+    animation-iteration-count: 3;
+    animation-timing-function: linear; /* 가속도 삭제 */
+}
+@keyframes rolling {
+    0% { left: 0; }
+    100% { left:  -15em; } /*-1800px*/
+}
 
 
 footer {
