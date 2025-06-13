@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery 라이브러리 -->
+     <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- swiper 라이브러리 -->
+     <script src="js/swiper-bundle.min.js"></script>
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>금호건설</title>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main class="container">
+            <section class="visual">
+                <h2 class="blind">팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide"> <!-- 확대하는 애니메이션은 img 태그 써야한다 -->
+                            <div class="photo"><img src="images/main/visual01.jpg" alt=""></div>
+                            <div class="wrapper">
+                                <div class="txt pc"><p>We create the </p></div>
+                                <div class="txt pc"><p>metropolitan beauty</p></div>
+
+                                <div class="txt mobile"><p>We create the</p></div>
+                                <div class="txt mobile"><p>metropolitan</p></div>
+                                <div class="txt mobile"><p>beauty</p></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                </div><!--//swiper-->
+	
+            </section>
+            <section class="biz"></section>
+            <section class="news"></section>
+            <section class="service"></section>
+        </main>
+        <footer></footer>
+    </div><!--//id="wrap"-->
+    
+</body>
+</html>
