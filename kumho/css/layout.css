@@ -1,1 +1,5 @@
-/* header와 footer가 같이 모든 페이지 공통사항 저장 */
+/* header와 footer가 같이 모든페이지 공통사항 저장 */
+
+footer {
+    margin: 500px 0 0 0;
+}

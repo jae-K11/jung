@@ -3,3 +3,78 @@
 @import url(common.css);
 @import url(layout.css);
 
+.visual .swiper-slide .photo {
+    overflow: hidden; /*photo 국룰*/
+    height: 100dvh; /* 모바일까지 고려한 브라우저 높이100%
+                        (모바일에서 주소줄뺴고의 높이) */
+ }
+ .visual .swiper-slide .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 1s;
+ }
+
+  .visual .swiper-slide.swiper-slide-active .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+  .visual .swiper-slide .txt_wrap {
+    position: absolute; /* swiper-slide 기준으로 정렬 , 브라우저에 swiper-slide에 position: relative  있음*/
+    left: 0;
+    bottom: 28.1%; /*%계산 281px/1000(비주얼높이)*100 =28.1*/
+    width: 100%; /*wrapper안에 제대로 실행됨 */
+}
+  .visual .swiper-slide .txt_wrap .txt {
+    overflow: hidden;
+}
+  .visual .swiper-slide .txt_wrap .txt p {
+    color: #fff;
+    font-size: 4.12rem;/*70*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    /* 글자빼꼼하고 올라오는거*/
+    white-space: nowrap; /* 1줄로 표현 */ 
+    transform: translateY(100%); /* delay쓰면 미리 100%주어야함 */
+    transition: 0.5s;
+    transition-delay: 1s;
+  }
+ .visual .swiper-slide .txt_wrap .txt.delay1 p  {
+        transition-delay: 0.5s;
+}
+ .visual .swiper-slide .txt_wrap .txt.delay2 p {
+        transition-delay: 0.7s;
+}
+ .visual .swiper-slide .txt_wrap .txt.delay3 p {
+        transition-delay: 1s;
+ }
+.visual .swiper-slide.swiper-slide-active .txt_wrap .txt p {
+    transform: translateY(0);
+
+    /* 다음 비주얼배경도 글자뺴꼼하게 올라오는거 
+    animation-name: visual_txt;
+    animation-duration: 0.5s; /*몇초
+    animation-iteration-count: 1; /*몇번
+    animation-delay: 1s; /*딜레이
+    animation-fill-mode: forwards;*/
+}
+ @keyframes visual_txt {
+    0% { transform: translateY(100%); } /* 위에 translateY 값과 같아야함 */
+    100% { transform: translateY(0); }
+ }
+.visual .swiper-slide .txt_wrap .txt.mobile {
+    display: none;
+}
+
+@media screen and (max-width:1024px) { /* 비주얼 모바일 */
+
+        .visual .swiper-slide .txt_wrap .txt.mobile {
+            display: block;   
+        }
+        .visual .swiper-slide .txt_wrap .txt.pc {
+            display: none;
+        }
+         .visual .swiper-slide .txt_wrap .txt p {
+            font-size: 2.37rem;/*38/16*/
+         }
+
+}
