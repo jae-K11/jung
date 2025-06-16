@@ -133,16 +133,12 @@
       }
 }
 @media screen and (max-width:1024px) { /* 비주얼 모바일 */
-
-        /* .visual .swiper-slide .txt_wrap .txt.mobile {
-            display: block;   
-        }
-        .visual .swiper-slide .txt_wrap .txt.pc {
-            display: none;
-        }
-         .visual .swiper-slide .txt_wrap .txt p {
-            font-size: 2.37rem;38/16
-        } */
+        .visual .swiper-slide .txt_wrap .txt p {
+          font-size: 3.43rem;/*55/16*/
+      }
+      .visual .swiper-slide .txt_wrap {
+          bottom: 30.1%;
+      }
 }
 @media screen and (max-width:768px) { /*비주얼모바일*/
         .visual .swiper-slide.swiper-slide-active .photo img {
