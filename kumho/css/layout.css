@@ -14,6 +14,9 @@ header {
     align-items: center; /*위아래 가운데*/
     color: #fff;
 }
+header .logo {
+    margin-bottom: 20px;
+}
 header .logo a {
     display: block;
     width: 10.23em; /*174/17*/
@@ -72,10 +75,19 @@ header .util .search .search_open::before {
     }
     header .gnb .gnb_wrap ul.depth1 > li {
         width: 7.76em; /*박스그렸던 너비 132px*/
+        text-align: center;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        line-height: var(--header-h);
+        font-size: 1.29rem;
+        font-weight: var(--bold-weight);
     }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: none;
     }
+
+
 }/*@media*/
 
 
