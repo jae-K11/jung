@@ -21,7 +21,7 @@
         메뉴가 상단으로 사라질때  gnb_up
         pc버전에서 메뉴에 마우스를 오버하면 menu_over
         mobile버전에서 메뉴를 클릭하면  menu_open -->
-        <header class="fixed">
+        <header class="">
             <h1 class="logo"><a href="index.html"><span class="blind">금호건설</span></a></h1>
             <nav class="gnb">
                  <div class="gnb_util">
@@ -35,7 +35,8 @@
                 <button class="gnb_open"><span>메뉴열기</span></button>
                 <div class="gnb_wrap">
                     <ul class="depth1"><!--1차메뉴-->
-                        <li>
+                        <!-- pc버전에서 over클래스 추가 , 모바일에서는 open클래스 추가 -->
+                        <li class="">
                             <a href="#"><span>회사소개</span></a>
                             <ul class="depth2"><!--2차메뉴-->
                                 <li><a href="#"><span>기업정보</span></a></li>
