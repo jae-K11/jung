@@ -71,6 +71,7 @@ html, body {
 /* css 변수*/
 :root {
     --header-h: 100px; /*header 높이*/
+    --header-h-m: -100px; /*header 높이 마이너스 값*/
     --tit-color: #1D1D1D;
     --point-color: #AA1515;
     --bold-weight: 700;
@@ -82,7 +83,8 @@ html, body {
 }
 @media screen and (max-width:1024px) {
    :root {
-    --header-h: 100px; /*header 높이*/
+    --header-h: 56px; /*header 높이*/
+    --header-h-m: -56px;
     }
 }
 @media screen and (max-width:768px) {
